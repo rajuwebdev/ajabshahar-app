@@ -1,0 +1,115 @@
+.footer-bg {
+  background: url(/footer-bg.svg) -1px 0px no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 80px 0 0 0;
+  box-sizing: border-box;
+}
+footer {
+  background: #000;
+}
+
+.footer-content-max-width {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.footer-border {
+  margin: 3rem auto 0;
+  border-top: 1px solid #828282;
+}
+.footer-content {
+  width: 100%;
+  margin: 0 auto;
+}
+.footer-content:last-child {
+  width: auto;
+}
+.footer-text {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 300;
+}
+.footer-text span {
+  color: #b3b3b3;
+}
+.footer-border-top {
+  border-top: 1px solid #828282;
+  width: 90%;
+  margin: 0 auto;
+}
+.footer-border-top img {
+  margin: 2rem 0;
+}
+.footer-content {
+  width: 100%;
+  margin: 0 auto;
+}
+.footer-content:last-child {
+  width: 85%;
+  padding: 0 0 0 15%;
+}
+
+/* .footer-tree{
+    max-width: 1333px;
+    margin: 0 auto;
+} */
+.footer-tree img {
+  position: absolute;
+  right: 0;
+}
+.footer-text {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+.footer-text span {
+  color: #fff;
+}
+.footer-content > div {
+  width: 120%;
+}
+.footer-content > div:last-child {
+  width: 60%;
+}
+.email-subscribe {
+  position: relative;
+}
+.email-subscribe::before {
+  content: " |  ";
+  margin: 0 4px;
+  font-size: 16px;
+}
+.footer-content a {
+  width: fit-content;
+}
+.tree-icon {
+  background: url(/tree.svg) no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  right: 10%;
+  top: -150px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-content:last-child,
+  .footer-content {
+    width: 100%;
+    margin: 2rem 0;
+  }
+  .footer-border-top {
+    width: 100%;
+  }
+  .footer-border-top img {
+    margin: 1rem 0;
+    width: 6rem;
+  }
+  .footer-text {
+    font-size: 0.7rem;
+    line-height: 1.25rem;
+  }
+  .bg-black {
+    background: black;
+  }
+}
