@@ -1,13 +1,13 @@
 export interface ContentItem {
-  id: string
-  title: string
-  subtitle?: string
-  description: string
-  image?: string
-  video?: string
-  category: "songs" | "poems" | "reflections" | "people" | "films"
-  author?: string
-  tags?: string[]
+  id: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  image?: string;
+  video?: string;
+  category: "songs" | "poems" | "reflections" | "people" | "films";
+  author?: string;
+  tags?: string[];
 }
 
 export const contentData: ContentItem[] = [
@@ -17,7 +17,7 @@ export const contentData: ContentItem[] = [
     subtitle: "I Lost My Heart To Nizam's Glance",
     description:
       "The delicacy of looking eyes with the beloved one, the delicacy of looking eyes with the beloved one, the delightful disregard for social convention, inspired by the gossiping neighbourhood women.",
-    video: "/sample-music-performance.mp4",
+    video: "https://www.youtube.com/watch?v=KfcBrpqub50",
     category: "songs",
     author: "HAJI MALANG AYLA & ABID MOHAMMAD",
     tags: ["classical", "traditional"],
@@ -26,7 +26,8 @@ export const contentData: ContentItem[] = [
     id: "2",
     title: "Masti kahe kumhaar se",
     subtitle: "tu kya roondai moye?",
-    description: "Ik din aisa aayega, main roondagi toyey. The potter tells the earth - Thus and thus I pound you...",
+    description:
+      "Ik din aisa aayega, main roondagi toyey. The potter tells the earth - Thus and thus I pound you...",
     image: "/potter-working-with-clay-traditional-art.png",
     category: "poems",
     author: "KABIR VANI VAIDYA",
@@ -58,12 +59,12 @@ export const contentData: ContentItem[] = [
     subtitle: "Journeys with Ram & Kabir",
     description:
       "A film by SHABNAM VIRMANI. Ram is a 19th century mystic poet of north India who defied the boundaries between Hindu and Muslim. He had a Muslim name and upbringing, but Hindu name for God - Ram Who is Ram's Ram?",
-    video: "/sample-documentary-film.mp4",
+    video: "https://www.youtube.com/watch?v=KfcBrpqub50",
     category: "films",
     author: "SHABNAM VIRMANI",
     tags: ["documentary", "spirituality"],
   },
-]
+];
 
 export const navigationItems = [
   { name: "SONGS", href: "/songs" },
@@ -71,7 +72,7 @@ export const navigationItems = [
   { name: "REFLECTIONS", href: "/reflections" },
   { name: "PEOPLE", href: "/people" },
   { name: "FILMS", href: "/films" },
-]
+];
 
 export const footerLinks = {
   main: [
@@ -88,7 +89,7 @@ export const footerLinks = {
     { name: "Youtube", href: "#" },
     { name: "Instagram", href: "#" },
   ],
-}
+};
 
 export const searchCategories = [
   { name: "ALL RESULTS", key: "all" },
@@ -97,4 +98,4 @@ export const searchCategories = [
   { name: "REFLECTIONS", key: "reflections" },
   { name: "PEOPLE", key: "people" },
   { name: "FILMS", key: "films" },
-]
+];

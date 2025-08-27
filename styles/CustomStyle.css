@@ -49,6 +49,23 @@
   width: 98%;
   margin: 4px auto 0;
 }
+.card-heading {
+  font-size: 1.8rem;
+  line-height: normal;
+}
+.semi-heading {
+  font-size: 1.4rem;
+  color: #6d6e71;
+}
+.semi-heading-2 {
+  color: #6d6e71;
+  font-size: 1.12rem;
+  font-weight: 400;
+}
+.card-text {
+  font-size: 1rem;
+  color: #6d6e71;
+}
 @media screen and (max-width: 768px) {
   .product-card:nth-child(even) {
     transform: translate(0, 0);

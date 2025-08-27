@@ -1,0 +1,8 @@
+.modal-container .bg-white:hover {
+  box-shadow: none;
+}
+
+.modal-container .card-shape-top::before,
+.modal-container .card-shape-top::after {
+  display: none;
+}

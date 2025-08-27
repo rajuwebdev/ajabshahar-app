@@ -40,7 +40,7 @@ export default function Hero({ isSearchOpen }: HeroProps) {
       </div>
       <div className="relative z-10  px-4 sm:px-6 lg:px-8 pt-26 hero-container">
         {isSearchOpen && (
-          <div className="flex justify-center mb-1">
+          <div className="flex">
             <div className="relative w-[750px] max-w-full">
               <div className="relative">
                 <Image
