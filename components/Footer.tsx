@@ -22,8 +22,9 @@ export default function Footer() {
   return (
     <footer className="text-white footer-bg">
       <div className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="tree-icon"></div>
         <div className="footer-content-max-width mx-auto">
-          <div className="w-[94%] max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20 relative">
+          <div className="footer-inner">
             {/* About Section */}
             <div className="footer-content">
               <h3 className="text-pink-400 text-lg font-semibold mb-4">
@@ -128,8 +129,8 @@ export default function Footer() {
               <Image
                 src={footerLogo}
                 alt="Ajab Shahar"
-                width={150}
-                height={150}
+                width={130}
+                height={130}
               />
             </div>
             <p className="text-gray-400 text-xs footer-text">

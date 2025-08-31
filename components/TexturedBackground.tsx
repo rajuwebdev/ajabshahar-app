@@ -5,15 +5,15 @@ export default function TexturedBackground() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: `url("/bg.png")`,
-          backgroundSize: "1140px auto", // match your design width
+          backgroundImage: `url("/layout-bg.svg")`,
+          backgroundSize: "1360px auto", // match your design width
           backgroundRepeat: "repeat-y", // repeat vertically
           backgroundPosition: "center top",
         }}
       />
 
       {/* Light overlay for readability */}
-      <div className="absolute inset-0 bg-white/80" />
+      <div className="inset-0 " />
     </div>
   );
 }

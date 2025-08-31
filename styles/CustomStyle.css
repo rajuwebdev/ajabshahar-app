@@ -32,11 +32,11 @@
 }
 .card-shape-top::after {
   content: " ";
-  background: url(/card-shape-bottom.svg) no-repeat;
+  background: url(/bottom-shapes.svg) no-repeat;
   width: 104%;
   background-size: cover;
   position: absolute;
-  bottom: -30px;
+  bottom: -21px;
   left: -2px;
   height: 36px;
   z-index: 10;

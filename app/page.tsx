@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Header from "@/components/Header"
-import Hero from "@/components/Hero"
-import Footer from "@/components/Footer"
+import { useState } from "react";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const handleSearchToggle = () => {
-    setIsSearchOpen(!isSearchOpen)
-  }
+    setIsSearchOpen(!isSearchOpen);
+  };
 
   return (
     <main className="min-h-screen">
@@ -18,5 +18,5 @@ export default function HomePage() {
       <Hero isSearchOpen={isSearchOpen} />
       <Footer />
     </main>
-  )
+  );
 }

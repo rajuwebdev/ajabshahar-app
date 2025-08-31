@@ -74,7 +74,7 @@ export default function ContentCard({
         <div className="flex items-center justify-end">
           <Link
             href={`/${item.category}/${item.id}`}
-            className="text-sm font-medium text-pink-600 hover:text-pink-700 transition-colors"
+            className="text-sm font-medium text-pink-600 hover:text-pink-700 transition-colors z-20"
           >
             {item.category === "poems" ? "EXPLORE POEM" : "EXPLORE NOW"}
           </Link>
