@@ -85,17 +85,28 @@ footer {
   background: url(/tree.svg) no-repeat;
   background-size: cover;
   position: absolute;
-  top: 0;
+  top: -4rem;
   height: 50px;
   width: 50px;
   right: 13%;
-  top: -60px;
 }
 .footer-inner {
   max-width: 1280px;
   display: flex;
   margin: 0 auto;
   gap: 10rem;
+}
+@media screen and (max-width: 1024px) {
+  .footer-inner {
+    gap: 4rem;
+    flex-direction: column;
+  }
+  .footer-content:last-child {
+    margin: 0;
+  }
+  .tree-icon {
+    top: -2rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -117,5 +128,12 @@ footer {
   }
   .bg-black {
     background: black;
+  }
+  .footer-inner {
+    gap: 0rem;
+    flex-direction: row;
+  }
+  .tree-icon {
+    top: -6%;
   }
 }
