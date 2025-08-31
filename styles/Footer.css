@@ -131,9 +131,12 @@ footer {
   }
   .footer-inner {
     gap: 0rem;
-    flex-direction: row;
+    flex-direction: column;
   }
   .tree-icon {
     top: -6%;
+  }
+  form input {
+    max-width: 120px;
   }
 }
