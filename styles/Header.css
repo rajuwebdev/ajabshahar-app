@@ -1,3 +1,11 @@
+
+header nav a,
+.about-text{
+  color: #1A1A1A;
+  font-size: 1.54rem;
+}
+
+
 @media screen and (min-width: 768px) {
   .gradient-bg {
     transition: none;

@@ -40,7 +40,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors tracking-wide uppercase"
+                  className="text-sm  hover:text-gray-600 transition-colors tracking-wide uppercase"
                 >
                   {item.name}
                 </Link>
@@ -51,7 +51,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
           <div className="flex items-center space-x-6">
             <Link
               href="/about"
-              className="text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors tracking-wide uppercase"
+              className="about-text   hover:text-gray-600 transition-colors tracking-wide uppercase"
             >
               ABOUT
             </Link>
@@ -65,7 +65,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
               }`}
               aria-label="Toggle search"
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-8 h-8" />
             </button>
 
             <div className="w-12 h-12  rounded-full flex items-center justify-center cursor-pointer  ">
