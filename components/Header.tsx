@@ -107,3 +107,5 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
     </header>
   );
 }
+
+

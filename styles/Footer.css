@@ -75,13 +75,14 @@ footer {
 .footer-content a {
   width: fit-content;
 }
-.tree-icon {
+.footer-bg::before {
+  content: " ";
   background: url(/tree.svg) no-repeat;
   background-size: cover;
   position: absolute;
-  top: -4rem;
-  height: 50px;
-  width: 50px;
+  top: 4px;
+  height: 60px;
+  width: 60px;
   right: 13%;
 }
 .footer-inner {
@@ -98,9 +99,14 @@ footer {
   .footer-content:last-child {
     margin: 0;
   }
-  .tree-icon {
-    top: -2rem;
+  .tree-icon{
+    top:2.85rem;
   }
+  .product-card:nth-child(even) {
+    transform: translate(0%, 0);
+
+}
+  
 }
 
 @media screen and (max-width: 767px) {
@@ -127,9 +133,10 @@ footer {
     gap: 0rem;
     flex-direction: column;
   }
-  .tree-icon {
-    top: -6%;
+   .tree-icon{
+    top:1rem;
   }
+  
   form input {
     max-width: 160px;
   }

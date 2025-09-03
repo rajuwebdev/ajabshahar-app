@@ -15,7 +15,7 @@
 }
 .border-top-pink {
   border-top: 1px solid #e31e79;
-  padding: 12px 0 0;
+  padding: 1rem 0 0;
   box-sizing: border-box;
 }
 
@@ -48,24 +48,35 @@
 .vide-custom-width {
   width: 98%;
   margin: 4px auto 0;
+  padding: 4px 0 0;
+}
+.vide-custom-width img{
+   padding: 4px 0 0;
 }
 .card-heading {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   line-height: normal;
+  margin: 0;
 }
 .semi-heading {
   font-size: 1.4rem;
   color: #6d6e71;
+     margin: 4px 0;
 }
 .semi-heading-2 {
   color: #6d6e71;
   font-size: 1.12rem;
   font-weight: 400;
+  padding: 0;
+  margin: 0;
 }
 .card-text {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
   color: #6d6e71;
+  margin: 1rem 0  1.9rem;
 }
+
 @media screen and (max-width: 768px) {
   .product-card:nth-child(even) {
     transform: translate(0, 0);

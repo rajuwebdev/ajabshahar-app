@@ -20,9 +20,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="text-white footer-bg">
-      <div className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+    <footer className="text-white footer-bg relative">
         <div className="tree-icon"></div>
+      <div className=" pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+      
         <div className="footer-content-max-width mx-auto">
           <div className="footer-inner">
             {/* About Section */}
