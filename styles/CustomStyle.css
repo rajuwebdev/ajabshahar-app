@@ -54,25 +54,27 @@
    padding: 4px 0 0;
 }
 .card-heading {
-  font-size: 1.9rem;
+  font-size: 2rem;
   line-height: normal;
   margin: 0;
+  color: #E31E79;
 }
 .semi-heading {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #6d6e71;
-     margin: 4px 0;
+  margin: 4px 0;
+  font-family: 'Lora', serif;
 }
 .semi-heading-2 {
   color: #6d6e71;
   font-size: 1.12rem;
-  font-weight: 400;
+  font-weight: 300;
   padding: 0;
   margin: 0;
 }
 .card-text {
-  font-size: 1.1rem;
-  line-height: 1.5rem;
+  font-size: 1.14rem;
+  line-height: 1.55rem;
   color: #6d6e71;
   margin: 1rem 0  1.9rem;
 }

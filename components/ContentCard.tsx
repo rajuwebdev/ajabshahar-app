@@ -52,16 +52,16 @@ export default function ContentCard({
 
       <div className="p-5 card-shape-top pt-1 pb-0">
         <div className="mb-2">
-          <h3 className="card-heading font-semibold text-pink-600 mb-1">
+          <h3 className="card-heading font-semibold mb-1">
             {item.title}
           </h3>
           {item.subtitle && (
-            <p className="text-sm text-gray-600 italic mb-2 semi-heading">
+            <p className="text-sm  italic mb-2 semi-heading">
               {item.subtitle}
             </p>
           )}
           {item.author && (
-            <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-3 semi-heading-2">
+            <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3 semi-heading-2">
               {item.author}
             </p>
           )}

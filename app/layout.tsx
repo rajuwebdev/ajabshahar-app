@@ -1,19 +1,8 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
 
-const lora = Lora({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-lora",
-});
 
 export const metadata: Metadata = {
   title: "Ajab Shahar - A Wondrous City of Songs, Poems and Conversations",
@@ -28,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${lora.variable}`}>
+    <html lang="en" className=''>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

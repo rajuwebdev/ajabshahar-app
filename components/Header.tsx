@@ -23,7 +23,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
         <div className="flex  justify-between">
           <div className="flex gap-10">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-24   flex items-center justify-center relative">
+              <div className="w-30   flex items-center justify-center relative">
                 <div className="absolute inset-2 flex items-center justify-center">
                   <Image
                     src={logo}
@@ -68,7 +68,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
               <Search className="w-5 h-5" />
             </button>
 
-            <div className="w-8 h-8  rounded-full flex items-center justify-center cursor-pointer  ">
+            <div className="w-12 h-12  rounded-full flex items-center justify-center cursor-pointer  ">
               <Image src={radio} alt="Ajab Shahar" width={150} height={150} />
             </div>
 
