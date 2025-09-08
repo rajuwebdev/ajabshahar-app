@@ -6,3 +6,16 @@
 .modal-container .card-shape-top::after {
   display: none;
 }
+
+
+/* Ensure the modal container has proper spacing */
+.modal-container {
+  padding: 1.5rem 0;
+}
+
+/* Style adjustments for content cards in modal */
+.modal-container .content-card {
+  border: none;
+  background: transparent;
+}
+

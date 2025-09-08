@@ -10,6 +10,7 @@ import Image from "next/image";
 import ajabNewsLogo from "../public/ajab-news-logo.svg";
 import PrevIcon from "../public/left-arrow.svg";
 import NextIcon from "../public/right-arrow.svg";
+import popUpBg from "../public/pop-up-bg-v2.png";
 
 import type { ContentItem } from "@/lib/data";
 import ContentCard from "./ContentCard";
@@ -37,10 +38,27 @@ export default function ContentSliderModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2">
-      <div className="relative bg-white rounded-2xl max-w-[660px] w-full overflow-hidden flex flex-col items-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      {/* Background container with 90% height and centered */}
+      <div 
+        className="absolute w-full h-[94%] max-w-[860px] mx-auto"
+        style={{
+          backgroundImage: `url(${popUpBg.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          // borderRadius: '1rem',
+          zIndex: -1
+        }}
+      />
+      
+      {/* Modal content */}
+      <div className="relative rounded-2xl max-w-[640px] w-full flex flex-col items-center overflow-hidden bg-transparent">
         {/* Header */}
-        <div className="flex items-center justify-between w-full px-4 py-3 ">
+        <div className="flex items-center justify-between w-full px-2 py-2 bg-white rounded-t-2xl">
           <div>
             <Image
               src={ajabNewsLogo}
@@ -59,7 +77,7 @@ export default function ContentSliderModal({
         </div>
 
         {/* Swiper wrapper */}
-        <div className="relative w-full flex justify-center">
+        <div className="relative w-full flex justify-center bg-white">
           {/* Prev Button */}
           <button
             ref={prevRef}
@@ -102,11 +120,11 @@ export default function ContentSliderModal({
             }}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             initialSlide={initialIndex}
-            className="w-full flex justify-center"
+            className="w-full flex justify-center bg-white"
           >
             {items.map((item) => (
               <SwiperSlide key={item.id} className="flex justify-center">
-                <div className="max-w-[440px] w-full mx-auto modal-container">
+                <div className="max-w-[440px] w-full mx-auto modal-container pt-0">
                   <ContentCard
                     item={item}
                     className="rounded-none shadow-none"
@@ -116,6 +134,8 @@ export default function ContentSliderModal({
             ))}
           </Swiper>
         </div>
+        
+       
       </div>
     </div>
   );
