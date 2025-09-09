@@ -1,6 +1,5 @@
-
 :root {
-  --main-pink-color: #E31E79;
+  --main-pink-color: #e31e79;
 }
 .hero-container {
   max-width: 900px;
@@ -18,12 +17,12 @@
   margin: 8rem 0;
 }
 .border-top-pink {
-  border-top: 1px solid var(--main-pink-color); 
+  border-top: 1px solid var(--main-pink-color);
   padding: 1rem 0 0;
   box-sizing: border-box;
 }
-.pink{
-  color: var(--main-pink-color); 
+.pink {
+  color: var(--main-pink-color);
 }
 
 .card-shape-top::before {
@@ -39,12 +38,12 @@
 }
 .card-shape-top::after {
   content: " ";
-  background: url(/bottom-shapes.svg) no-repeat;
-  width: 104%;
+  background: url(/card-shape-bottom-v2.png) no-repeat;
+  width: 105%;
   background-size: cover;
   position: absolute;
-  bottom: -21px;
-  left: -2px;
+  bottom: -25px;
+  left: -5px;
   height: 36px;
   z-index: 10;
 }
@@ -57,20 +56,20 @@
   margin: 4px auto 0;
   padding: 4px 0 0;
 }
-.vide-custom-width img{
-   padding: 4px 0 0;
+.vide-custom-width img {
+  padding: 4px 0 0;
 }
 .card-heading {
   font-size: 2rem;
   line-height: normal;
   margin: 0;
-color: var(--main-pink-color); 
+  color: var(--main-pink-color);
 }
 .semi-heading {
   font-size: 1.5rem;
   color: #6d6e71;
   margin: 4px 0;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 .semi-heading-2 {
   color: #6d6e71;
@@ -83,7 +82,10 @@ color: var(--main-pink-color);
   font-size: 1.14rem;
   line-height: 1.55rem;
   color: #6d6e71;
-  margin: 1rem 0  1.9rem;
+  margin: 1rem 0 1.9rem;
+}
+.card-rounded-4 {
+  border-radius: 5px 5px 0 0;
 }
 
 @media screen and (max-width: 768px) {

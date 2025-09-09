@@ -16,7 +16,7 @@ export default function ContentCard({
 
   return (
     <div
-      className={`bg-white rounded-lg shadow-lg  hover:shadow-xl transition-shadow duration-300 ${className}`}
+      className={`bg-white card-rounded-4 shadow-lg  hover:shadow-xl transition-shadow duration-300 ${className}`}
     >
       {hasMedia && (
         <div className="relative h-60 w-full vide-custom-width">
@@ -25,7 +25,7 @@ export default function ContentCard({
               <iframe
                 src={item.video.replace("watch?v=", "embed/")}
                 title={item.title}
-                className="h-full w-full rounded-t-lg"
+                className="h-full w-full card-rounded-4"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
@@ -52,13 +52,9 @@ export default function ContentCard({
 
       <div className="p-5 card-shape-top pt-1 pb-0">
         <div className="mb-2">
-          <h3 className="card-heading font-semibold mb-1">
-            {item.title}
-          </h3>
+          <h3 className="card-heading font-semibold mb-1">{item.title}</h3>
           {item.subtitle && (
-            <p className="text-sm  italic mb-2 semi-heading">
-              {item.subtitle}
-            </p>
+            <p className="text-sm  italic mb-2 semi-heading">{item.subtitle}</p>
           )}
           {item.author && (
             <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3 semi-heading-2">
