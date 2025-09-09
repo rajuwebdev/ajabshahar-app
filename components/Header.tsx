@@ -58,7 +58,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
 
             <button
               onClick={onSearchToggle}
-              className={`p-2 transition-colors ${
+              className={`transition-colors ${
                 isSearchOpen
                   ? "text-pink-500"
                   : "text-gray-700 hover:text-gray-900"
@@ -68,7 +68,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
               <Search className="w-8 h-8" />
             </button>
 
-            <div className="w-12 h-12  rounded-full flex items-center justify-center cursor-pointer  ">
+            <div className="w-12 h-12 radio-logo  rounded-full flex items-center justify-center cursor-pointer  ">
               <Image src={radio} alt="Ajab Shahar" width={150} height={150} />
             </div>
 

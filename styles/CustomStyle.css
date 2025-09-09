@@ -1,3 +1,7 @@
+
+:root {
+  --main-pink-color: #E31E79;
+}
 .hero-container {
   max-width: 900px;
   margin: 0 auto;
@@ -14,9 +18,12 @@
   margin: 8rem 0;
 }
 .border-top-pink {
-  border-top: 1px solid #e31e79;
+  border-top: 1px solid var(--main-pink-color); 
   padding: 1rem 0 0;
   box-sizing: border-box;
+}
+.pink{
+  color: var(--main-pink-color); 
 }
 
 .card-shape-top::before {
@@ -57,7 +64,7 @@
   font-size: 2rem;
   line-height: normal;
   margin: 0;
-  color: #E31E79;
+color: var(--main-pink-color); 
 }
 .semi-heading {
   font-size: 1.5rem;

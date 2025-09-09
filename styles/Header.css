@@ -4,7 +4,15 @@ header nav a,
   color: #1A1A1A;
   font-size: 1.54rem;
 }
-
+.radio-logo img{
+  margin-top: -1rem;
+}
+.footer-heading-text{
+color: #E31E79;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+}
 
 @media screen and (min-width: 768px) {
   .gradient-bg {
@@ -14,7 +22,7 @@ header nav a,
   }
   .gradient-bg::after {
     content: " ";
-    background: url(/header-bg.svg) no-repeat;
+    background: url(/header-curve.png) no-repeat;
     width: 100%;
     position: absolute;
     left: 0;

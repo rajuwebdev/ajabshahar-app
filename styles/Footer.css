@@ -1,3 +1,7 @@
+:root {
+  --main-pink-color: #E31E79;
+}
+
 .footer-bg {
   background: url(/footer-bg.svg) -1px 0px no-repeat;
   background-size: cover;
@@ -59,22 +63,36 @@ footer {
 .footer-content > div {
   width: 120%;
 }
-.footer-content > div:last-child {
-  width: 60%;
+button.pink{
+   color: var(--main-pink-color); 
+    font-size: 1.14rem;
+    font-weight: 400;
 }
 .email-subscribe {
   position: relative;
+   color: var(--main-pink-color); 
+   font-size: 1.14rem;
+  
 }
 .email-subscribe::before {
   content: " |  ";
   margin: 0 4px;
-  font-size: 16px;
+  font-size: 1.14rem;
   position: absolute;
   left: -5px;
 }
 .footer-content a {
   width: fit-content;
+  color: var(--main-pink-color); 
+font-size: 1.14rem;
+  font-weight: 400;
+  line-height: normal;
 }
+
+.pink {
+  color: var(--main-pink-color); 
+}
+
 .footer-bg::before {
   content: " ";
   background: url(/tree.svg) no-repeat;
@@ -86,11 +104,23 @@ footer {
   right: 13%;
 }
 .footer-inner {
-  max-width: 1280px;
+  max-width: 1340px;
   display: flex;
   margin: 0 auto;
   gap: 10rem;
 }
+.text-gray{
+ color: #E6E6E6;
+  font-size: 1.14rem;
+  letter-spacing: 0.9px;
+}
+#email-subscrib::placeholder {
+  color: #E6E6E6 !important;
+  opacity: 1 !important;
+  font-size: 1.14rem;
+  letter-spacing: 0.9px;
+}
+
 @media screen and (max-width: 1024px) {
   .footer-inner {
     gap: 4rem;
@@ -99,14 +129,12 @@ footer {
   .footer-content:last-child {
     margin: 0;
   }
-  .tree-icon{
-    top:2.85rem;
+  .tree-icon {
+    top: 2.85rem;
   }
   .product-card:nth-child(even) {
     transform: translate(0%, 0);
-
-}
-  
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -133,8 +161,8 @@ footer {
     gap: 0rem;
     flex-direction: column;
   }
-   .tree-icon{
-    top:1rem;
+  .tree-icon {
+    top: 1rem;
   }
   
   form input {

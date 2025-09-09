@@ -28,19 +28,19 @@ export default function Footer() {
           <div className="footer-inner">
             {/* About Section */}
             <div className="footer-content">
-              <h3 className="text-pink-400 text-lg font-semibold mb-4">
+              <h3 className="footer-heading-text">
                 About
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-gray">
                 Ajab Shahar is a wondrous city of songs, poems and conversations
                 from Bhakti, Sufi and Baul oral traditions from India and
                 beyond.
               </p>
               <div className="mt-6">
-                <h4 className="text-pink-400 text-lg font-semibold mb-4">
+                <h3 className="footer-heading-text">
                   Support
-                </h4>
-                <p className="text-gray-300 text-sm">
+                </h3>
+                <p className="text-gray max-w-[70%]">
                   If you have found joy and value here, consider supporting this
                   work.
                 </p>
@@ -49,47 +49,48 @@ export default function Footer() {
 
             {/* Stay Connected */}
             <div className="footer-content">
-              <h3 className="text-pink-400 text-lg font-semibold mb-4">
+              <h3 className="footer-heading-text">
                 Stay Connected
               </h3>
-              <p className="text-gray-300 text-sm mb-4">
+              <p className="text-gray mb-4">
                 Hear from us quarterly with news, inspirations and more...
               </p>
 
               <form onSubmit={handleSubscribe} className="flex">
                 <input
-                  type="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-4 py-2 bg-gray-800 text-white border-0 rounded-l focus:outline-none focus:ring-2 focus:ring-pink-400"
-                  required
-                />
+  type="email"
+  placeholder="Email"
+  id="email-subscrib"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  className="flex-1 px-4 py-2 bg-gray-800 text-white border-0 rounded-l focus:outline-none email-input" 
+  required
+/>
                 <button
                   type="submit"
-                  className="px-6 py-2 bg-gray-800 text-white rounded-r hover:bg-pink-700 transition-colors cursor-pointer email-subscribe"
+                  className="px-6 py-2 bg-gray-800 text-white rounded-r transition-colors cursor-pointer email-subscribe"
                 >
                   Subscribe
                 </button>
               </form>
 
               <div className="mt-4">
-                <p className="text-gray-300 text-sm mb-2">
+                <p className="text-gray text-sm mb-2">
                   Write to us at{" "}
                   <a
                     href="mailto:ajabshahar@gmail.com"
-                    className="text-pink-400 hover:text-pink-300"
+                    className="pink"
                   >
                     ajabshahar@gmail.com
                   </a>
                 </p>
-                <p className="text-gray-300 text-sm">
+                <p className="text-gray text-sm">
                   Follow us on{" "}
                   {footerLinks.social.map((link, index) => (
                     <span key={link.name}>
                       <a
                         href={link.href}
-                        className="text-pink-400 hover:text-pink-300"
+                        className="pink"
                       >
                         {link.name}
                       </a>
@@ -107,7 +108,7 @@ export default function Footer() {
                   <button
                     key={link.name}
                     onClick={() => setShowAjabNews(true)}
-                    className="text-pink-400 hover:text-pink-300 text-sm transition-colors text-left cursor-pointer"
+                    className="pink  transition-colors text-left cursor-pointer"
                   >
                     {link.name}
                   </button>
@@ -115,7 +116,7 @@ export default function Footer() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="text-pink-400 hover:text-pink-300 text-sm transition-colors"
+                    className="pink text-sm transition-colors"
                   >
                     {link.name}
                   </Link>
