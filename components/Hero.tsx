@@ -59,35 +59,32 @@ export default function Hero({ isSearchOpen }: HeroProps) {
                   onBlur={() =>
                     setTimeout(() => setIsSearchFocused(false), 200)
                   }
-                  className="w-full pl-16 pr-6 py-4 text-lg bg-white rounded-full shadow-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent"
+                  className={`w-full pl-16 pr-6 py-4 serch-input-font bg-white shadow-lg border border-gray-200 focus:outline-none 
+    ${
+      isSearchFocused && searchQuery
+        ? "rounded-custom-onsearch"
+        : "rounded-custom"
+    }`}
                   autoFocus
                 />
               </div>
 
               {/* Search Results Dropdown */}
               {isSearchFocused && searchQuery && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 max-h-96 overflow-y-auto z-20">
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white  serch-result-conatiner max-h-150 overflow-y-auto z-20">
                   {searchCategories.map((category) => {
                     const results = getResultsByCategory(category.key);
                     if (results.length === 0) return null;
 
                     return (
-                      <div
-                        key={category.key}
-                        className="p-4 border-b border-gray-100 last:border-b-0"
-                      >
-                        <h3 className="text-xs font-semibold text-pink-500 uppercase mb-3">
+                      <div key={category.key} className="border-gray-custom">
+                        <h3 className="search-result-heading uppercase mb-3">
                           {category.name} ({results.length})
                         </h3>
                         {results.slice(0, 3).map((item) => (
-                          <div
-                            key={item.id}
-                            className="py-2 hover:bg-gray-50 rounded px-2 cursor-pointer"
-                          >
-                            <h4 className="text-sm font-medium text-gray-900">
-                              {item.title}
-                            </h4>
-                            <p className="text-xs text-gray-600 mt-1">
+                          <div key={item.id} className="py-2  cursor-pointer">
+                            {/* <h4 className="search-result-semi-heading">{item.title}</h4> */}
+                            <p className="search-result-semi-heading mt-1">
                               {item.subtitle || item.author}
                             </p>
                           </div>

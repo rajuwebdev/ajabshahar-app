@@ -87,6 +87,42 @@
 .card-rounded-4 {
   border-radius: 5px 5px 0 0;
 }
+.search-result-heading {
+  color: var(--main-pink-color);
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: normal;
+  font-family: "Merriweather Sans", sans-serif;
+  margin: 0;
+}
+.search-result-semi-heading {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: normal;
+  color: #4f4f4f;
+}
+.border-gray-custom {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0.9rem 4.25rem;
+  box-sizing: border-box;
+  width: 96%;
+  margin: -3px auto 0;
+}
+.serch-input-font {
+  color: #4f4f4f;
+  font-size: 28px;
+}
+.serch-result-conatiner {
+  box-shadow: 0px 6px 14px -4px rgba(0, 0, 0, 0.25);
+  margin: 0;
+  border-radius: 0 0 2.5rem 2.5rem;
+}
+.rounded-custom {
+  border-radius: 2.5rem;
+}
+.rounded-custom-onsearch {
+  border-radius: 2.5rem 2.5rem 0 0;
+}
 
 @media screen and (max-width: 768px) {
   .product-card:nth-child(even) {
