@@ -71,7 +71,7 @@ export default function Hero({ isSearchOpen }: HeroProps) {
 
               {/* Search Results Dropdown */}
               {isSearchFocused && searchQuery && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-white  serch-result-conatiner max-h-150 overflow-y-auto z-20">
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white  serch-result-conatiner max-h-150 overflow-y-auto  z-[100]">
                   {searchCategories.map((category) => {
                     const results = getResultsByCategory(category.key);
                     if (results.length === 0) return null;
