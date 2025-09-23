@@ -1,22 +1,33 @@
-"use client";
+import React from "react";
 
-import { useState } from "react";
-import Header from "@/components/Header";
-// import Hero from "@/components/Hero";
+import News from "@/components/news/News";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Image from "next/image";
 
-export default function HomePage() {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+import footerLogo from "../ajab-news-logo.svg";
 
-  const handleSearchToggle = () => {
-    setIsSearchOpen(!isSearchOpen);
-  };
-
+export default function NewsPage() {
   return (
-    <main className="min-h-screen">
-      <Header onSearchToggle={handleSearchToggle} isSearchOpen={isSearchOpen} />
-      {/* <Hero isSearchOpen={isSearchOpen} /> */}
+    <div className="min-h-screen">
+      <Header />
+      <div className="news-inner-container">
+        <main className="relative z-10">
+          <div className="mx-auto z-11">
+            <h1 className="flex justify-center">
+              <Image
+                src="/ajab-news-logo.svg"
+                alt="Logo"
+                width={300}
+                height={100}
+              />
+            </h1>
+            <div className="news-border"></div>
+            <News />
+          </div>
+        </main>
+      </div>
       <Footer />
-    </main>
+    </div>
   );
 }
