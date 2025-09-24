@@ -124,6 +124,11 @@
   border-radius: 2.5rem 2.5rem 0 0;
 }
 
+.full-background {
+  background: url(/news-bg.png) 0 0 repeat;
+  background-size: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .product-card:nth-child(even) {
     transform: translate(0, 0);

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import "./SearchResults.css";
 
 // Main data array for search results
 const searchData = {
@@ -101,28 +102,27 @@ export default function SearchResults() {
       : searchData.results.filter((item) => item.type === activeFilter);
 
   return (
-    <div className="mt-10">
+    <div className="mt-8">
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-4 pb-8">
         {/* Search Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-2xl md:text-3xl font-light text-gray-700 mb-4">
-            You searched for{" "}
-            <span className="font-semibold">'{searchData.query}'</span>,{" "}
-            {searchData.totalResults} results found
+        <div className="text-center mb-2">
+          <h1 className="text-2xl md:text-3xl font-light black-custom-color mb-0 mt-0">
+            You searched for '{searchData.query}', {searchData.totalResults}{" "}
+            results found
           </h1>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8 border-b pb-4">
+        <div className="flex flex-wrap justify-center gap-4 mb-10 border-t pt-3 pb-4">
           {searchData.filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={` border-0   cursor-pointer transition-colors ${
                 activeFilter === filter
-                  ? "bg-blue-600 text-white"
-                  : "bg-white text-gray-600 hover:bg-gray-100 border"
+                  ? "text-pink text-white"
+                  : "bg-white  border search-btn"
               }`}
             >
               {filter} (
@@ -134,7 +134,7 @@ export default function SearchResults() {
         {/* Search Results */}
         <div className="space-y-8">
           {filteredResults.map((item, index) => (
-            <div key={item.id} className="bg-white rounded-lg  p-6">
+            <div key={item.id} className="bg-white">
               {/* Result Item */}
               <div className="flex flex-col md:flex-row gap-6">
                 {/* Image */}
@@ -178,7 +178,7 @@ export default function SearchResults() {
 
               {/* Divider */}
               {index < filteredResults.length - 1 && (
-                <hr className="mt-6 border-gray-200" />
+                <div className="border-dotted-seprator"></div>
               )}
             </div>
           ))}

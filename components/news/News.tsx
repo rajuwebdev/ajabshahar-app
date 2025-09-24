@@ -72,12 +72,12 @@ function ToggleText({
 
   return (
     <p className="leading-relaxed">
-      {expanded ? text : text.slice(0, maxChars) + "... "}
+      {expanded ? text : text.slice(0, maxChars)}
       <button
         onClick={() => setExpanded(!expanded)}
         className="pink-text cursor-pointer"
       >
-        {expanded ? "Read less" : "Read more"}
+        {expanded ? "...less" : "...more"}
       </button>
     </p>
   );
@@ -99,7 +99,7 @@ function ImageSlider({ images }: { images: string[] }) {
 
   return (
     <>
-      <div className="relative mb-6 rounded-lg overflow-hidden">
+      <div className="relative mb-6 rounded-lg">
         {/* Main Image */}
         <div className="relative mb-2 rounded-lg w-full max-w-[680px] h-auto mx-auto news-banner-shadow">
           <img
