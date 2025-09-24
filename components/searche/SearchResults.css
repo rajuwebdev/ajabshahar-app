@@ -42,3 +42,30 @@ button.search-btn:first-child::before {
 .black-custom-color {
   color: #4d4d4d;
 }
+.search-result-heading {
+  color: #4f4f4f;
+  font-size: 1.6rem;
+  line-height: normal;
+  margin: 0 0 0.25rem 0;
+  font-family: "Lora", serif;
+}
+.search-result-heading span {
+  color: #4f4f4f;
+  font-size: 1.55rem;
+  font-weight: 300;
+  margin: 0 0 0 0.5rem;
+}
+.search-result-text {
+  font-size: 1.2rem;
+  line-height: normal;
+  color: #6d6e71;
+}
+.button-font {
+  font-size: 1.36rem;
+}
+
+.thumbnail-image {
+  filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.1));
+  padding: 0 5px 5px;
+  background: #fff;
+}

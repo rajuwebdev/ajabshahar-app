@@ -18,9 +18,8 @@ const searchData = {
       subtitle: "I Lost My Heart To Nizam's Glance",
       description:
         "The story highlights the gulshan-e-na-afreeda (the Uncreated Garden) that Shah Inayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egoic spirit of connection and love.",
-      image: "/images/had-anhad.jpg",
+      image: "/TN-About-Basavalingaiah-Hiremath.jpg",
       category: "Music",
-      date: "2024-01-15",
     },
     {
       id: 2,
@@ -29,9 +28,8 @@ const searchData = {
       subtitle: "by KABIR PROJECT",
       description:
         "The story highlights the gulshan-e-na-afreeda (the Uncreated Garden) that Shah Inayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egoic spirit of connection and love.",
-      image: "/images/gulshan-armaan.jpg",
+      image: "/TN-About-Basavalingaiah-Hiremath.jpg",
       category: "Poetry",
-      date: "2024-01-10",
     },
     {
       id: 3,
@@ -39,9 +37,8 @@ const searchData = {
       title: "Haman Hai Isha",
       description:
         "The story highlights the gulshan-e-na-afreeda (the Uncreated Garden) that Shah Inayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egoic spirit of connection and love.",
-      image: "/images/haman-isha.jpg",
+      image: "/TN-About-Basavalingaiah-Hiremath.jpg",
       category: "Poetry",
-      date: "2024-01-05",
     },
     {
       id: 4,
@@ -50,9 +47,8 @@ const searchData = {
       subtitle: "Farid's Legacy",
       description:
         "A collection of mystical poems and reflections from the Sufi tradition, featuring the works of Farid and other spiritual poets.",
-      image: "/images/mystic-poetry.jpg",
+      image: "/TN-About-Basavalingaiah-Hiremath.jpg",
       category: "Collection",
-      date: "2024-01-01",
     },
   ],
   counts: {
@@ -119,7 +115,7 @@ export default function SearchResults() {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={` border-0   cursor-pointer transition-colors ${
+              className={` border-0 button-font  cursor-pointer transition-colors ${
                 activeFilter === filter
                   ? "text-pink text-white"
                   : "bg-white  border search-btn"
@@ -139,7 +135,7 @@ export default function SearchResults() {
               <div className="flex flex-col md:flex-row gap-6">
                 {/* Image */}
                 <div className="flex-shrink-0">
-                  <div className="w-32 h-32 bg-gray-200 rounded-lg overflow-hidden">
+                  <div className="w-56 h-32 bg-gray-200 thumbnail-image overflow-hidden">
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -152,27 +148,19 @@ export default function SearchResults() {
 
                 {/* Content */}
                 <div className="flex-1">
-                  {/* Category Badge */}
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full mb-3">
-                    {item.type}
-                  </span>
-
                   {/* Title */}
-                  <h2 className="text-xl md:text-2xl font-semibold text-gray-800 mb-2">
+                  <h2 className="search-result-heading mb-2">
                     {item.title}
+
+                    {item.subtitle && (
+                      <span className="mb-3 italic">{item.subtitle}</span>
+                    )}
                   </h2>
 
                   {/* Subtitle */}
-                  {item.subtitle && (
-                    <h3 className="text-lg text-gray-600 mb-3 italic">
-                      {item.subtitle}
-                    </h3>
-                  )}
 
                   {/* Description */}
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    {item.description}
-                  </p>
+                  <p className="search-result-text mb-4">{item.description}</p>
                 </div>
               </div>
 
