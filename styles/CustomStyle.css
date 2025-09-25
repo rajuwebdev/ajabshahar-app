@@ -130,18 +130,11 @@
 }
 
 .full-background-home-page {
-  background: url(/layout-bg.svg) 0 -40px no-repeat;
+  background: url(/Combined-Background-image-home.svg) 0 -40px no-repeat;
   background-size: 100%;
-  max-width: 1380px;
+  max-width: 1480px;
   margin: 0 auto;
-  padding: 0 0 150px 0;
-}
-.full-background-home-page::after {
-  content: " ";
-  background: url(/home-page-left-side.png) 0 0 repeat;
-  background-size: 100%;
-  max-width: 30px;
-  background-position: left top;
+  padding: 0 0 200px 0;
 }
 
 /* Apply padding only for cards with no video/image */
