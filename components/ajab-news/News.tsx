@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import "./News.css";
+import NewsCard from "./NewsCard";
 
 // News data array matching your screenshot content
 const newsData = [
@@ -181,6 +182,7 @@ export default function Ajabnews() {
           )}
         </article>
       ))}
+      <NewsCard />
     </div>
   );
 }
