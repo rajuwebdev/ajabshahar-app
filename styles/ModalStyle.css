@@ -7,10 +7,9 @@
   display: none;
 }
 
-
 /* Ensure the modal container has proper spacing */
 .modal-container {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 /* Style adjustments for content cards in modal */
@@ -18,4 +17,21 @@
   border: none;
   background: transparent;
 }
-
+.news-logo img {
+  max-width: 110px;
+  position: absolute;
+  left: -60px;
+  z-index: 10;
+  top: -29px;
+}
+.news-text img {
+  max-width: 130px;
+  position: absolute;
+  left: 35px;
+  z-index: 10;
+  top: 22px;
+}
+.card-shape-top .items-center {
+  display: flex;
+  justify-content: flex-start;
+}

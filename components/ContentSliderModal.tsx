@@ -7,7 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 
-import ajabNewsLogo from "../public/ajab-news-logo.svg";
+import ajabNewsLogo from "../public/ajab-news-fly.png";
+import ajabNewsText from "../public/ajab-news-text.png";
 import PrevIcon from "../public/left-arrow.svg";
 import NextIcon from "../public/right-arrow.svg";
 import popUpBg from "../public/pop-up-bg-v2.png";
@@ -40,36 +41,33 @@ export default function ContentSliderModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Background container with 90% height and centered */}
-      <div 
-        className="absolute w-full h-[94%] max-w-[860px] mx-auto"
+      <div
+        className="absolute w-full h-[96%] max-w-[820px] mx-auto"
         style={{
           backgroundImage: `url(${popUpBg.src})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          // borderRadius: '1rem',
-          zIndex: -1
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          zIndex: -1,
         }}
       />
-      
+
       {/* Modal content */}
-      <div className="relative rounded-2xl max-w-[640px] w-full flex flex-col items-center overflow-hidden bg-transparent">
+      <div className="relative rounded-2xl pt-2 pb-2 max-w-[620px] w-full flex flex-col items-center  bg-transparent">
         {/* Header */}
         <div className="flex items-center justify-between w-full px-2 py-2 bg-white rounded-t-2xl">
-          <div>
-            <Image
-              src={ajabNewsLogo}
-              alt="Ajab News"
-              width={150}
-              height={150}
-            />
+          <div className="news-logo">
+            <Image src={ajabNewsLogo} alt="Ajab News" />
+          </div>
+          <div className="news-text">
+            <Image src={ajabNewsText} alt="Ajab News" />
           </div>
           <button
             onClick={onClose}
-            className="text-pink-600 hover:text-pink-700 text-xl font-bold cursor-pointer"
+            className="text-pink-600 hover:text-pink-700  mr-1 text-xl font-bold cursor-pointer"
             aria-label="Close"
           >
             ✕
@@ -124,7 +122,7 @@ export default function ContentSliderModal({
           >
             {items.map((item) => (
               <SwiperSlide key={item.id} className="flex justify-center">
-                <div className="max-w-[440px] w-full mx-auto modal-container pt-0">
+                <div className="max-w-[420px] w-full mx-auto modal-container pt-0">
                   <ContentCard
                     item={item}
                     className="rounded-none shadow-none"
@@ -134,8 +132,6 @@ export default function ContentSliderModal({
             ))}
           </Swiper>
         </div>
-        
-       
       </div>
     </div>
   );

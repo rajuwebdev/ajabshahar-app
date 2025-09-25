@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Search } from "lucide-react";
 import { contentData, searchCategories } from "@/lib/data";
 import ContentCard from "./ContentCard";
-// import TexturedBackground from "./TexturedBackground";
 import "../styles/CustomStyle.css";
 import Image from "next/image";
 import searchIcon from "../public/search-icon.svg";

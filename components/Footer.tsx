@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { footerLinks, contentData } from "@/lib/data";
 import "../styles/Footer.css";
@@ -18,6 +18,11 @@ export default function Footer() {
     console.log("Subscribe:", email);
     setEmail("");
   };
+
+  // 🔹 Auto-open modal on first load and refresh
+  useEffect(() => {
+    setShowAjabNews(true);
+  }, []);
 
   return (
     <footer className="text-white footer-bg relative">
@@ -135,7 +140,6 @@ export default function Footer() {
         </div>
       </div>
       {/* Ajab News Modal */}
-
       <ContentSliderModal
         items={contentData}
         isOpen={showAjabNews}
