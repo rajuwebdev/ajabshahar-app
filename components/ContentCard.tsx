@@ -13,7 +13,11 @@ export default function ContentCard({ item }: ContentCardProps) {
   const hasMedia = item.video || item.image;
 
   return (
-    <div className="bg-white card-rounded-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div
+      className={`bg-white card-rounded-4 shadow-lg hover:shadow-xl transition-shadow duration-300 ${
+        !hasMedia ? "no-media-card" : ""
+      }`}
+    >
       {/* Media */}
       {hasMedia && (
         <div className="relative h-60 w-full vide-custom-width">

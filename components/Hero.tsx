@@ -15,7 +15,7 @@ interface HeroProps {
 export default function Hero({ isSearchOpen }: HeroProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [showAjabNews, setShowAjabNews] = useState(false); // 🔹 add modal state
+  const [showAjabNews, setShowAjabNews] = useState(false);
 
   const filteredResults = contentData.filter(
     (item) =>
@@ -29,7 +29,6 @@ export default function Hero({ isSearchOpen }: HeroProps) {
     return filteredResults.filter((item) => item.category === category);
   };
 
-  // 🔹 Auto-open modal on first load and refresh
   useEffect(() => {
     setShowAjabNews(true);
   }, []);
@@ -40,7 +39,7 @@ export default function Hero({ isSearchOpen }: HeroProps) {
         <div className="absolute inset-0 bg-gradient-to-br "></div>
       </div>
 
-      <div className="relative z-10  px-4 sm:px-6 lg:px-8 pt-26 hero-container">
+      <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-26 hero-container">
         {isSearchOpen && (
           <div className="flex">
             <div className="relative w-[750px] max-w-full">
@@ -73,7 +72,7 @@ export default function Hero({ isSearchOpen }: HeroProps) {
 
               {/* Search Results Dropdown */}
               {isSearchFocused && searchQuery && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-white  serch-result-conatiner max-h-150 overflow-y-auto  z-[100]">
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white serch-result-conatiner max-h-150 overflow-y-auto z-[100]">
                   {searchCategories.map((category) => {
                     const results = getResultsByCategory(category.key);
                     if (results.length === 0) return null;
@@ -106,14 +105,20 @@ export default function Hero({ isSearchOpen }: HeroProps) {
               !isSearchOpen ? "pt-8" : ""
             }`}
           >
-            {contentData.map((item) => (
-              <div
-                key={item.id}
-                className="break-inside-avoid mb-6 product-card py-0.5"
-              >
-                <ContentCard item={item} />
-              </div>
-            ))}
+            {contentData.map((item) => {
+              const hasMedia = item.video || item.image;
+
+              return (
+                <div
+                  key={item.id}
+                  className={`break-inside-avoid mb-6 product-card py-0.5 ${
+                    !hasMedia ? "no-media-padding" : ""
+                  }`}
+                >
+                  <ContentCard item={item} />
+                </div>
+              );
+            })}
           </div>
         </div>
 

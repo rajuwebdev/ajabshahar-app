@@ -138,9 +138,10 @@
 }
 
 /* Apply padding only for cards with no video/image */
-.no-media-padding > .card-shape-top {
-  padding: 0 12%;
-  box-sizing: border-box;
+.no-media-padding .justify-center.flex {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .product-card:nth-child(even) {

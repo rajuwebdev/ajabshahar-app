@@ -16,7 +16,7 @@ export const contentData: ContentItem[] = [
     title: "Main Nijaam Se Naina",
     subtitle: "I Lost My Heart To Nizam's Glance",
     description:
-      "The delicacy of looking eyes with the beloved one, the delicacy of looking eyes with the beloved one, the delightful disregard for social convention, inspired by the gossiping neighbourhood women.",
+      "The delicacy of locking eyes with the beloved and losing one’s heart to him combines in this song with a delightful disregard for social convention, represented by the gossiping neighbourhood women...",
     video: "https://www.youtube.com/watch?v=KfcBrpqub50",
     category: "songs",
     author: "HAJI MALANG AYLA & ABID MOHAMMAD",
@@ -24,27 +24,6 @@ export const contentData: ContentItem[] = [
   },
   {
     id: "2",
-    title: "Masti kahe kumhaar se",
-    subtitle: "tu kya roondai moye?",
-    description:
-      "Ik din aisa aayega, main roondagi toyey. The potter tells the earth - Thus and thus I pound you...",
-    image: "/potter-working-with-clay-traditional-art.png",
-    category: "poems",
-    author: "KABIR VANI VAIDYA",
-    tags: ["kabir", "philosophy"],
-  },
-  {
-    id: "3",
-    title: "Shoonyat is not nothingness",
-    description:
-      "Nothing has its own intrinsic character. Everything exists in relation to something else. The name of this relational knowledge.",
-    image: "/meditation-spiritual-philosophy-discussion.png",
-    category: "reflections",
-    author: "RAJA KRISHNA NATH",
-    tags: ["philosophy", "spirituality"],
-  },
-  {
-    id: "4",
     title: "Maukhik Parampara",
     subtitle: "Oral Traditions",
     description:
@@ -53,6 +32,28 @@ export const contentData: ContentItem[] = [
     author: "RAVI VAIDYA SINGH",
     tags: ["tradition", "culture"],
   },
+  {
+    id: "3",
+    title: "‘Shoonya’ is not  ’nothingness",
+    subtitle: "tu kya roondai moye",
+    description:"Nothing has its own intrinsic character. Everything exists in relation to something else. The name of this realization is‘shoonya...",
+    image: "/potter-working-with-clay-traditional-art.png",
+    category: "poems",
+    author: "KABIR VANI VAIDYA",
+    tags: ["kabir", "philosophy"],
+  },
+  {
+    id: "4",
+    title: "Maukhik Parampara",
+     subtitle: "Oral Traditions",
+    description:
+      "While there are many kinds of oral traditions – those which transmit mythology, sacred texts and folklore – our focus here are the oral traditions of Kabir or other mystic poets – the Bhaktas, Sufis and Bauls. While there are many kinds of oral traditions.",
+    image: "/meditation-spiritual-philosophy-discussion.png",
+    category: "reflections",
+    author: "RAJA KRISHNA NATH",
+    tags: ["philosophy", "spirituality"],
+  },
+
   {
     id: "5",
     title: "Had Anhad",
