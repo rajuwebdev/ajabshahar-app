@@ -3,17 +3,20 @@
 }
 
 .footer-bg {
-  background: url(/footer-bg.svg) -1px 0px no-repeat;
+  background: url(/footer-black-bg.svg) -1px 0px no-repeat;
   background-size: cover;
   position: relative;
   padding: 80px 0 0 0;
   box-sizing: border-box;
   margin-top: -150px;
+  box-sizing: border-box;
 }
 footer {
   background: #000;
 }
-
+.footer-right {
+  margin: -6px 0 0;
+}
 .footer-content-max-width {
   max-width: 100%;
   margin: 0 auto;
@@ -31,7 +34,7 @@ footer {
 }
 .footer-text {
   font-size: 14px;
-  color: #fff;
+  color: #e6e6e6;
   font-weight: 300;
 }
 .footer-text span {
@@ -93,7 +96,7 @@ button.pink {
   color: var(--main-pink-color);
 }
 .footer-heading-text a {
-  font-family: "Merriweather Sans";
+  font-family: "Lora", serif;
   font-weight: 400;
   line-height: normal;
   font-size: 28px;
@@ -118,7 +121,7 @@ button.pink {
 .text-gray {
   color: #e6e6e6;
   font-size: 18px;
-  letter-spacing: 0.9px;
+  letter-spacing: 1px;
 }
 #email-subscrib::placeholder {
   color: #e6e6e6 !important;

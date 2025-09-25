@@ -14,7 +14,6 @@ export default function Footer() {
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Subscribe:", email);
     setEmail("");
   };
 
@@ -45,7 +44,7 @@ export default function Footer() {
             <div className="footer-content">
               <h3 className="footer-heading-text">
                 <Link href="/ajab-news" className="pink">
-                  AJAB NEWS
+                  Ajab News
                 </Link>
               </h3>
               <p className="text-gray mb-4">
@@ -94,7 +93,7 @@ export default function Footer() {
             {/* Navigation Links */}
             <div className="footer-content flex flex-col gap-3">
               {footerLinks.main.map((link) =>
-                link.name === "AJAB NEWS" ? (
+                link.name === "Ajab News" ? (
                   <button
                     key={link.name}
                     onClick={() => setShowAjabNews(true)}

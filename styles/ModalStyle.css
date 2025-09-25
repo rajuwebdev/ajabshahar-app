@@ -32,10 +32,7 @@
   z-index: 10;
   top: 22px;
 }
-.card-shape-top .justify-end.flex {
-  display: flex;
-  justify-content: flex-start !important;
-}
+
 .card-text {
   margin: 1rem 0 8px;
   box-shadow: none;

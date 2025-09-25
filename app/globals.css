@@ -1,25 +1,48 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: "Merriweather Sans";
+  src: url("/fonts/MerriweatherSans/MerriweatherSans-Light.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
 
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&family=Merriweather+Sans:wght@400;500;600;700&display=swap');
-
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/lora/Lora-Regular.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "LoraMedium";
+  src: url("/fonts/lora/Lora-MediumItalic.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "lora-italic";
+  src: url("/fonts/lora/Lora-Italic.ttf") format("truetype");
+  font-weight: 400;
+}
 
 /* body {
   font-family: 'Inter', sans-serif;
 } */
 
-h1, h2, h3 {
-  font-family: 'Lora', serif;
+h1,
+h2,
+h3 {
+  font-family: "Lora", serif;
   font-weight: 400;
 }
-div, p {
+div,
+p {
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 300;
 }
-
+.lora-italic {
+  font-family: "lora-italic";
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -132,7 +155,6 @@ div, p {
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   /* Fonts */
-  
 }
 
 @layer base {

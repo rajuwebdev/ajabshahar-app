@@ -1,7 +1,7 @@
 header nav a,
 .about-text {
   color: #1a1a1a;
-  font-size: 1.54rem;
+  font-size: 25px;
 }
 .radio-logo img {
   margin-top: -1rem;
@@ -9,7 +9,7 @@ header nav a,
 .footer-heading-text {
   color: #e31e79;
   font-size: 28px;
-  font-style: normal;
+  font-family: "Lora", serif;
   font-weight: 400;
 }
 .header-inner-container {

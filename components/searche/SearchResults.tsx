@@ -149,7 +149,7 @@ export default function SearchResults() {
                 {/* Content */}
                 <div className="flex-1">
                   {/* Title */}
-                  <h2 className="search-result-heading mb-2">
+                  <h2 className="search-result-page-heading mb-2">
                     {item.title}
 
                     {item.subtitle && (

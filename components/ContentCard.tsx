@@ -60,7 +60,9 @@ export default function ContentCard({ item }: ContentCardProps) {
         <div className="mb-2">
           <h3 className="card-heading font-semibold mb-1">{item.title}</h3>
           {item.subtitle && (
-            <p className="text-sm italic mb-2 semi-heading">{item.subtitle}</p>
+            <p className="text-sm lora-italic mb-2 semi-heading">
+              {item.subtitle}
+            </p>
           )}
           {item.author && (
             <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">

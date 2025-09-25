@@ -25,16 +25,15 @@
   max-width: 100%;
 }
 .custom-heading-font {
-  color: #4f4f4f;
-  font-size: 1.55rem;
-  font-style: normal;
+  color: #4d4d4d;
+  font-size: 28px;
   font-weight: 400;
   line-height: normal;
   margin: 0 0 4px 0;
 }
 .leading-relaxed {
   color: #6d6e71;
-  font-size: 1.14rem;
+  font-size: 18px;
 }
 .news-banner-shadow {
   filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.1));

@@ -48,7 +48,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
             </nav>
           </div>
 
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-6 footer-right">
             <Link
               href="/about"
               className="about-text   hover:text-gray-600 transition-colors tracking-wide uppercase"
