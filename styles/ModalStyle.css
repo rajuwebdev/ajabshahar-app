@@ -35,3 +35,6 @@
   display: flex;
   justify-content: flex-start;
 }
+.card-text {
+  margin: 1rem 0 8px;
+}

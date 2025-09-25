@@ -7,7 +7,6 @@ import { footerLinks, contentData } from "@/lib/data";
 import "../styles/Footer.css";
 import Image from "next/image";
 import footerLogo from "../public/footer-logo.svg";
-import ContentSliderModal from "./ContentSliderModal";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -18,11 +17,6 @@ export default function Footer() {
     console.log("Subscribe:", email);
     setEmail("");
   };
-
-  // 🔹 Auto-open modal on first load and refresh
-  useEffect(() => {
-    setShowAjabNews(true);
-  }, []);
 
   return (
     <footer className="text-white footer-bg relative">
@@ -139,12 +133,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {/* Ajab News Modal */}
-      <ContentSliderModal
-        items={contentData}
-        isOpen={showAjabNews}
-        onClose={() => setShowAjabNews(false)}
-      />
     </footer>
   );
 }
