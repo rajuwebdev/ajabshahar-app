@@ -99,3 +99,4 @@ export const searchCategories = [
   { name: "PEOPLE", key: "people" },
   { name: "FILMS", key: "films" },
 ];
+
