@@ -1,11 +1,11 @@
 import React from "react";
 
-import News from "@/components/news/News";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 
 import FullBackground from "@/components/fullBackground";
+import Ajabnews from "@/components/ajab-news/News";
 
 export default function NewsPage() {
   return (
@@ -24,7 +24,7 @@ export default function NewsPage() {
                 />
               </h1>
               <div className="news-border"></div>
-              <News />
+              <Ajabnews />
             </div>
           </main>
         </div>

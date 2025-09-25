@@ -129,6 +129,21 @@
   background-size: 100%;
 }
 
+.full-background-home-page {
+  background: url(/layout-bg.svg) 0 -40px no-repeat;
+  background-size: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 0 150px 0;
+}
+.full-background-home-page::after {
+  content: " ";
+  background: url(/home-page-left-side.png) 0 0 repeat;
+  background-size: 100%;
+  max-width: 30px;
+  background-position: left top;
+}
+
 @media screen and (max-width: 768px) {
   .product-card:nth-child(even) {
     transform: translate(0, 0);

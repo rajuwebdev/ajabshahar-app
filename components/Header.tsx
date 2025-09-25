@@ -19,7 +19,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 gradient-bg">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-5 lg:pt-10">
+      <div className="mx-auto header-inner-container">
         <div className="flex  justify-between">
           <div className="flex gap-10">
             <Link href="/" className="flex items-center space-x-3">
@@ -58,7 +58,7 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
 
             <button
               onClick={onSearchToggle}
-              className={`transition-colors ${
+              className={`transition-colors cursor-pointer ${
                 isSearchOpen
                   ? "text-pink-500"
                   : "text-gray-700 hover:text-gray-900"
@@ -107,5 +107,3 @@ export default function Header({ onSearchToggle, isSearchOpen }: HeaderProps) {
     </header>
   );
 }
-
-

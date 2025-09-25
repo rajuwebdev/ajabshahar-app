@@ -1,6 +1,6 @@
 export default function TexturedBackground() {
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
+    <div className="inset-0 pointer-events-none z-0">
       {/* Background texture */}
       <div
         className="absolute inset-0"

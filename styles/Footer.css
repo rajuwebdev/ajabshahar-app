@@ -1,5 +1,5 @@
 :root {
-  --main-pink-color: #E31E79;
+  --main-pink-color: #e31e79;
 }
 
 .footer-bg {
@@ -8,6 +8,7 @@
   position: relative;
   padding: 80px 0 0 0;
   box-sizing: border-box;
+  margin-top: -100px;
 }
 footer {
   background: #000;
@@ -63,16 +64,15 @@ footer {
 .footer-content > div {
   width: 120%;
 }
-button.pink{
-   color: var(--main-pink-color); 
-    font-size: 1.14rem;
-    font-weight: 400;
+button.pink {
+  color: var(--main-pink-color);
+  font-size: 1.14rem;
+  font-weight: 400;
 }
 .email-subscribe {
   position: relative;
-   color: var(--main-pink-color); 
-   font-size: 1.14rem;
-  
+  color: var(--main-pink-color);
+  font-size: 1.14rem;
 }
 .email-subscribe::before {
   content: " |  ";
@@ -83,14 +83,20 @@ button.pink{
 }
 .footer-content a {
   width: fit-content;
-  color: var(--main-pink-color); 
-font-size: 1.14rem;
+  color: var(--main-pink-color);
+  font-size: 18px;
   font-weight: 400;
   line-height: normal;
 }
 
 .pink {
-  color: var(--main-pink-color); 
+  color: var(--main-pink-color);
+}
+.footer-heading-text a {
+  font-family: "Merriweather Sans";
+  font-weight: 400;
+  line-height: normal;
+  font-size: 28px;
 }
 
 .footer-bg::before {
@@ -98,24 +104,24 @@ font-size: 1.14rem;
   background: url(/tree.svg) no-repeat;
   background-size: cover;
   position: absolute;
-  top: 6px;
+  top: 10px;
   height: 60px;
   width: 60px;
-  right: 13%;
+  right: 8%;
 }
 .footer-inner {
-  max-width: 1340px;
+  max-width: 1300px;
   display: flex;
   margin: 0 auto;
-  gap: 10rem;
+  gap: 13rem;
 }
-.text-gray{
- color: #E6E6E6;
-  font-size: 1.14rem;
+.text-gray {
+  color: #e6e6e6;
+  font-size: 18px;
   letter-spacing: 0.9px;
 }
 #email-subscrib::placeholder {
-  color: #E6E6E6 !important;
+  color: #e6e6e6 !important;
   opacity: 1 !important;
   font-size: 1.14rem;
   letter-spacing: 0.9px;
@@ -164,7 +170,7 @@ font-size: 1.14rem;
   .tree-icon {
     top: 1rem;
   }
-  
+
   form input {
     max-width: 160px;
   }

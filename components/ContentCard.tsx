@@ -72,7 +72,7 @@ export default function ContentCard({
             href={`/${item.category}/${item.id}`}
             className="text-sm font-medium pink hover:text-pink-700 transition-colors z-20"
           >
-            {item.category === "poems" ? "EXPLORE POEM" : "EXPLORE NOW"}
+            {item.category === "poems" ? "EXPLORE POEM" : "EXPLORE SONG"}
           </Link>
         </div>
       </div>

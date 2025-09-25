@@ -21,25 +21,20 @@ export default function Footer() {
 
   return (
     <footer className="text-white footer-bg relative">
-        <div className="tree-icon"></div>
+      <div className="tree-icon"></div>
       <div className=" pt-24 pb-12 px-4 sm:px-6 lg:px-8">
-      
         <div className="footer-content-max-width mx-auto">
           <div className="footer-inner">
             {/* About Section */}
             <div className="footer-content">
-              <h3 className="footer-heading-text">
-                About
-              </h3>
+              <h3 className="footer-heading-text">About</h3>
               <p className="text-gray">
                 Ajab Shahar is a wondrous city of songs, poems and conversations
                 from Bhakti, Sufi and Baul oral traditions from India and
                 beyond.
               </p>
               <div className="mt-6">
-                <h3 className="footer-heading-text">
-                  Support
-                </h3>
+                <h3 className="footer-heading-text">Support</h3>
                 <p className="text-gray max-w-[70%]">
                   If you have found joy and value here, consider supporting this
                   work.
@@ -50,22 +45,24 @@ export default function Footer() {
             {/* Stay Connected */}
             <div className="footer-content">
               <h3 className="footer-heading-text">
-                Stay Connected
+                <Link href="/ajab-news" className="pink">
+                  AJAB NEWS
+                </Link>
               </h3>
               <p className="text-gray mb-4">
-                Hear from us quarterly with news, inspirations and more...
+                To receive news, inspirations and more from us...
               </p>
 
               <form onSubmit={handleSubscribe} className="flex">
                 <input
-  type="email"
-  placeholder="Email"
-  id="email-subscrib"
-  value={email}
-  onChange={(e) => setEmail(e.target.value)}
-  className="flex-1 px-4 py-2 bg-gray-800 text-white border-0 rounded-l focus:outline-none email-input" 
-  required
-/>
+                  type="email"
+                  placeholder="Email"
+                  id="email-subscrib"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-1 px-4 py-2 bg-gray-800 text-white border-0 rounded-l focus:outline-none email-input"
+                  required
+                />
                 <button
                   type="submit"
                   className="px-6 py-2 bg-gray-800 text-white rounded-r transition-colors cursor-pointer email-subscribe"
@@ -77,10 +74,7 @@ export default function Footer() {
               <div className="mt-4">
                 <p className="text-gray text-sm mb-2">
                   Write to us at{" "}
-                  <a
-                    href="mailto:ajabshahar@gmail.com"
-                    className="pink"
-                  >
+                  <a href="mailto:ajabshahar@gmail.com" className="pink">
                     ajabshahar@gmail.com
                   </a>
                 </p>
@@ -88,10 +82,7 @@ export default function Footer() {
                   Follow us on{" "}
                   {footerLinks.social.map((link, index) => (
                     <span key={link.name}>
-                      <a
-                        href={link.href}
-                        className="pink"
-                      >
+                      <a href={link.href} className="pink">
                         {link.name}
                       </a>
                       {index < footerLinks.social.length - 1 && " | "}

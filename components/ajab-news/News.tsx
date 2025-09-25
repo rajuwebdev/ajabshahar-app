@@ -154,7 +154,7 @@ function ImageSlider({ images }: { images: string[] }) {
 }
 
 // 🔹 Main News Component
-export default function News() {
+export default function Ajabnews() {
   return (
     <div className="max-w-4xl mx-auto space-y-12 py-8">
       {newsData.map((news, index) => (
@@ -165,7 +165,7 @@ export default function News() {
           {/* Content Sections */}
           <div className="prose prose-lg max-w-none">
             {news.content.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="mb-6">
+              <div key={sectionIndex}>
                 {section.type === "heading" ? (
                   <h2 className="mb-4 custom-heading-font">{section.text}</h2>
                 ) : (
@@ -177,7 +177,7 @@ export default function News() {
 
           {/* Divider - Show only between articles */}
           {index < newsData.length - 1 && (
-            <div className="mt-8 border-dotted-seprator"></div>
+            <div className="mt-7 border-dotted-seprator"></div>
           )}
         </article>
       ))}

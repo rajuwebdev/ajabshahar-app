@@ -1,19 +1,21 @@
-
 header nav a,
-.about-text{
-  color: #1A1A1A;
+.about-text {
+  color: #1a1a1a;
   font-size: 1.54rem;
 }
-.radio-logo img{
+.radio-logo img {
   margin-top: -1rem;
 }
-.footer-heading-text{
-color: #E31E79;
-font-size: 28px;
-font-style: normal;
-font-weight: 400;
+.footer-heading-text {
+  color: #e31e79;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
 }
-
+.header-inner-container {
+  padding: 36px 0 0 70px;
+  box-sizing: border-box;
+}
 @media screen and (min-width: 768px) {
   .gradient-bg {
     transition: none;

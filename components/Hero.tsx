@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Search } from "lucide-react";
 import { contentData, searchCategories } from "@/lib/data";
 import ContentCard from "./ContentCard";
-import TexturedBackground from "./TexturedBackground";
+// import TexturedBackground from "./TexturedBackground";
 import "../styles/CustomStyle.css";
 import Image from "next/image";
 import searchIcon from "../public/search-icon.svg";
@@ -32,9 +32,9 @@ export default function Hero({ isSearchOpen }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-screen ">
+    <section className="relative min-h-screen full-background-home-page">
       {/* <div className="min-h-screen relative"> */}
-      <TexturedBackground />
+      {/* <TexturedBackground /> */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br "></div>
       </div>
