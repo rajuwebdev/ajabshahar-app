@@ -1,3 +1,4 @@
+.modal-container .bg-white,
 .modal-container .bg-white:hover {
   box-shadow: none;
 }
@@ -31,9 +32,9 @@
   z-index: 10;
   top: 22px;
 }
-.card-shape-top .items-center {
+.card-shape-top .justify-end.flex {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 .card-text {
   margin: 1rem 0 8px;
