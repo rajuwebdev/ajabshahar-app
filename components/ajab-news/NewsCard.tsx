@@ -52,7 +52,7 @@ export default function NewsCard() {
                 )}
               </h2>
 
-              <p className="text-gray-700">{item.description}</p>
+              <p>{item.description}</p>
             </div>
           </div>
         </div>

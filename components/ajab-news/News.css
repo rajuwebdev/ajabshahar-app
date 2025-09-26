@@ -51,6 +51,14 @@
   margin-top: -7rem;
 }
 .news-card-heading {
+  color: #4d4d4d;
+  font-size: 26px;
+}
+.news-card-heading span {
+  font-size: 26px;
   color: #6d6e71;
-  font-size: 22px;
+}
+p {
+  font-size: 18px;
+  color: #6d6e71;
 }
