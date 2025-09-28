@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
-import Loader from "@/components/Loader";
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import Loader from '@/components/Loader';
+import { useEffect, useState } from 'react';
 
 export default function HomePage() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);

@@ -1,19 +1,22 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { contentData, searchCategories } from "@/lib/data";
-import ContentCard from "./ContentCard";
-import "../styles/CustomStyle.css";
-import Image from "next/image";
-import searchIcon from "../public/search-icon.svg";
-import ContentSliderModal from "./ContentSliderModal";
+import { contentData, searchCategories } from '@/lib/data';
+import { getPublishedSongs } from '@/lib/services/songsService';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import useSWR from 'swr';
+import searchIcon from '../public/search-icon.svg';
+import '../styles/CustomStyle.css';
+import ContentSliderModal from './ContentSliderModal';
+import SongCard from './SongCard/SongCard';
+import { Song } from './SongCard/types';
 
-interface HeroProps {
+interface IHeroProps {
   isSearchOpen: boolean;
 }
 
-export default function Hero({ isSearchOpen }: HeroProps) {
-  const [searchQuery, setSearchQuery] = useState("");
+const Hero = ({ isSearchOpen }: IHeroProps) => {
+  const [searchQuery, setSearchQuery] = useState('');
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [showAjabNews, setShowAjabNews] = useState(false);
 
@@ -25,13 +28,19 @@ export default function Hero({ isSearchOpen }: HeroProps) {
   );
 
   const getResultsByCategory = (category: string) => {
-    if (category === "all") return filteredResults;
+    if (category === 'all') return filteredResults;
     return filteredResults.filter((item) => item.category === category);
   };
 
   useEffect(() => {
     setShowAjabNews(true);
   }, []);
+
+  //get published songs
+  const { data: publishedSongs, error, isLoading } = useSWR('published-songs', getPublishedSongs);
+
+  const shuffledSongs = publishedSongs?.songs?.sort(() => 0.5 - Math.random());
+  const visibleSongs = shuffledSongs?.slice(0, 5);
 
   return (
     <section className="relative min-h-screen full-background-home-page">
@@ -60,11 +69,7 @@ export default function Hero({ isSearchOpen }: HeroProps) {
                 onFocus={() => setIsSearchFocused(true)}
                 onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
                 className={`w-full pl-16 pr-6 py-4 serch-input-font bg-white shadow-lg border border-gray-200 focus:outline-none 
-                  ${
-                    isSearchFocused && searchQuery
-                      ? "rounded-custom-onsearch"
-                      : "rounded-custom"
-                  }`}
+                  ${isSearchFocused && searchQuery ? 'rounded-custom-onsearch' : 'rounded-custom'}`}
                 autoFocus
               />
             </div>
@@ -97,24 +102,23 @@ export default function Hero({ isSearchOpen }: HeroProps) {
         )}
 
         {/* Content cards (stay in place, not affected by search) */}
-        <div>
+        {!isLoading && (
           <div className="columns-1 md:columns-2 lg:columns-1 gap-6 pb-20 pt-8">
-            {contentData.map((item) => {
-              const hasMedia = item.video || item.image;
-
+            {visibleSongs.map((song: Song) => {
+              const hasMedia = song.youtubeVideoId || song.thumbnailURL;
               return (
                 <div
-                  key={item.id}
+                  key={song.id}
                   className={`break-inside-avoid mb-6 product-card py-0.5 ${
-                    !hasMedia ? "no-media-padding" : ""
+                    !hasMedia ? 'no-media-padding' : ''
                   }`}
                 >
-                  <ContentCard item={item} />
+                  <SongCard {...song} />
                 </div>
               );
             })}
           </div>
-        </div>
+        )}
 
         {/* Ajab News Modal */}
         <ContentSliderModal
@@ -125,4 +129,6 @@ export default function Hero({ isSearchOpen }: HeroProps) {
       </div>
     </section>
   );
-}
+};
+
+export default Hero;
