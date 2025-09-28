@@ -37,7 +37,11 @@ const Hero = ({ isSearchOpen }: IHeroProps) => {
   }, []);
 
   //get published songs
-  const { data: publishedSongs, error, isLoading } = useSWR('published-songs', getPublishedSongs);
+  const {
+    data: publishedSongs,
+    error,
+    isLoading,
+  } = useSWR('published-songs', getPublishedSongs, { revalidateOnFocus: false });
 
   const shuffledSongs = publishedSongs?.songs?.sort(() => 0.5 - Math.random());
   const visibleSongs = shuffledSongs?.slice(0, 5);
