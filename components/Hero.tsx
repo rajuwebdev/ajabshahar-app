@@ -8,8 +8,8 @@ import useSWR from 'swr';
 import searchIcon from '../public/search-icon.svg';
 import '../styles/CustomStyle.css';
 import ContentSliderModal from './ContentSliderModal';
-import SongCard from './SongCard/SongCard';
-import { Song } from './SongCard/types';
+import SongCard from './Home/SongCard/SongCard';
+import { Song } from './Home/SongCard/types';
 
 interface IHeroProps {
   isSearchOpen: boolean;
