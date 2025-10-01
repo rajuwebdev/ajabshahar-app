@@ -6,8 +6,9 @@
 .news-inner-container {
   background: url(/news-white-bg.png) left top;
   background-size: 100% auto;
-  padding: 6.5rem 5% 7rem;
-  width: 88%;
+  padding: 6.5rem 0 7rem;
+  max-width: 1440px;
+  width: 100%;
   text-align: left;
   margin: -30px auto 0;
   min-height: 1300px;
