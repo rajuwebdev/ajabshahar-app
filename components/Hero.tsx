@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import useSWR from 'swr';
 import searchIcon from '../public/search-icon.svg';
 import '../styles/CustomStyle.css';
-import YouTubePlayer from './Reusable/YouTubePlayer';
+import ContentSliderModal from './ContentSliderModal';
 import SongCard from './SongCard/SongCard';
 import { Song } from './SongCard/types';
 
@@ -105,7 +105,7 @@ const Hero = ({ isSearchOpen }: IHeroProps) => {
           </div>
         )}
 
-        <YouTubePlayer youtubeVideoId="wjoIQDtvTFw" />
+        {/* <YouTubePlayer youtubeVideoId="wjoIQDtvTFw" /> */}
 
         {/* Content cards (stay in place, not affected by search) */}
         {!isLoading && (
