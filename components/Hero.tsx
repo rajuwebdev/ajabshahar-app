@@ -1,10 +1,9 @@
 'use client';
 
+import useSongs from '@/hooks/use-songs';
 import { contentData, searchCategories } from '@/lib/data';
-import { getPublishedSongs } from '@/lib/services/songsService';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import useSWR from 'swr';
 import searchIcon from '../public/search-icon.svg';
 import '../styles/CustomStyle.css';
 import ContentSliderModal from './ContentSliderModal';
@@ -37,14 +36,7 @@ const Hero = ({ isSearchOpen }: IHeroProps) => {
   }, []);
 
   //get published songs
-  const {
-    data: publishedSongs,
-    error,
-    isLoading,
-  } = useSWR('published-songs', getPublishedSongs, { revalidateOnFocus: false });
-
-  const shuffledSongs = publishedSongs?.songs?.sort(() => 0.5 - Math.random());
-  const visibleSongs = shuffledSongs?.slice(0, 5);
+  const { visibleSongs = [], isLoading } = useSongs();
 
   return (
     <div className="full-background-home-page">
