@@ -7,7 +7,7 @@ export async function getPublishedSongs() {
     return response.data;
   } catch (error) {
     const message = handleApiError(error);
-    console.error('[getPublishedSongs] API Error:', message);
+    // console.error('[getPublishedSongs] API Error:', message);
     throw new Error(message);
   }
 }

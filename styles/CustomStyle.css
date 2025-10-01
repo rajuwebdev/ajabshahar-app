@@ -26,7 +26,7 @@
 }
 
 .card-shape-top::before {
-  content: " ";
+  content: ' ';
   background: url(/card-shape-top.svg) no-repeat;
   width: 100%;
   background-size: cover;
@@ -37,7 +37,7 @@
   z-index: 10;
 }
 .card-shape-top::after {
-  content: " ";
+  content: ' ';
   background: url(/card-shape-bottom-v2.png) no-repeat;
   width: 105%;
   background-size: cover;
@@ -70,7 +70,7 @@
   font-size: 24px;
   color: #6d6e71;
   margin: 4px 0;
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
 }
 .semi-heading-2 {
   color: #6d6e71;
@@ -96,11 +96,11 @@
   font-weight: 400;
   font-size: 0.9rem;
   line-height: normal;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
   margin: 0;
 }
 .search-result-semi-heading {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
   font-size: 1.5rem;
   line-height: normal;
   color: #4f4f4f;
@@ -134,9 +134,9 @@
 }
 
 .full-background-home-page {
-  background: url(/Combined-Background-image-home.svg) 0 -40px no-repeat;
+  background: url(/combined-Background-image-home-v2.svg) 0 -44px no-repeat;
   background-size: 100%;
-  max-width: 1480px;
+  max-width: 1420px;
   margin: 0 auto;
   padding: 0 0 200px 0;
 }
