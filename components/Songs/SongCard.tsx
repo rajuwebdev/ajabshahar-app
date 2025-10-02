@@ -62,7 +62,7 @@ export default function SongCard(item: Song) {
 
         <div className={`${!hasMedia ? 'justify-center' : 'justify-end'} flex`}>
           <Link
-            href={`/${item.id}/${item?.songTitle?.englishTransliteration.replace(' ', '-')}`}
+            href={`/songs/details/${item.id}`}
             className="text-sm font-medium pink hover:text-pink-700 transition-colors z-20 uppercase"
           >
             {`EXPLORE REFLECTIONS`}

@@ -7,15 +7,21 @@ export async function getPublishedSongs() {
     return response.data;
   } catch (error) {
     const message = handleApiError(error);
-    // console.error('[getPublishedSongs] API Error:', message);
+    console.error('[getPublishedSongs] API Error:', message);
     throw new Error(message);
   }
 }
 
-// export async function fetchUserById(userId: string) {
-//   const response = await axios.get(`/users/${userId}`);
-//   return response.data;
-// }
+export async function getPublishedSongsById(id: string) {
+  try {
+    const response = await axios.get(`/api/songs/${id}`);
+    return response.data;
+  } catch (error) {
+    const message = handleApiError(error);
+    console.error('[getPublishedSongs] API Error:', message);
+    throw new Error(message);
+  }
+}
 
 // export async function createUser(data: { name: string; email: string }) {
 //   const response = await axios.post("/users", data);
