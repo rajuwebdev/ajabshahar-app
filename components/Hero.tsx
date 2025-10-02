@@ -9,6 +9,7 @@ import '../styles/CustomStyle.css';
 import ContentSliderModal from './ContentSliderModal';
 import SongCard from './Home/SongCard/SongCard';
 import { Song } from './Home/SongCard/types';
+import Poem from './Home/Poem/Poem';
 
 interface IHeroProps {
   isSearchOpen: boolean;
@@ -101,28 +102,31 @@ const Hero = ({ isSearchOpen }: IHeroProps) => {
           {/* Content cards (stay in place, not affected by search) */}
           {!isLoading && (
             <div className="columns-1 md:columns-2 lg:columns-1 gap-6 pb-20 pt-8">
-              {visibleSongs.map((song: Song) => {
-                const hasMedia = song.youtubeVideoId || song.thumbnailURL;
-                return (
-                  <div
-                    key={song.id}
-                    className={`break-inside-avoid mb-6 product-card py-0.5 ${
-                      !hasMedia ? 'no-media-padding' : ''
-                    }`}
-                  >
-                    <SongCard {...song} />
-                  </div>
-                );
-              })}
+              {/* ✅ Only render the first song if it exists */}
+              {visibleSongs.length > 0 && (
+                <div
+                  key={visibleSongs[0].id}
+                  className={`break-inside-avoid mb-6 product-card py-0.5 ${
+                    !(visibleSongs[0].youtubeVideoId || visibleSongs[0].thumbnailURL)
+                      ? 'no-media-padding'
+                      : ''
+                  }`}
+                >
+                  <SongCard {...visibleSongs[0]} /> {/* show only the first card */}
+                </div>
+              )}
             </div>
           )}
+          <div className="poem-container">
+            <Poem />
+          </div>
 
           {/* Ajab News Modal */}
-          <ContentSliderModal
+          {/* <ContentSliderModal
             items={contentData}
             isOpen={showAjabNews}
             onClose={() => setShowAjabNews(false)}
-          />
+          /> */}
         </div>
       </section>
     </div>
