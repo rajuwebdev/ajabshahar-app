@@ -45,29 +45,20 @@ export default function SongCard(item: Song) {
         }`}
       >
         <div className="mb-2">
-          <h3 className="card-heading font-semibold mb-1">{item.metaTitle}</h3>
-          {item.songTitle.englishTranslation && (
-            <p className="text-sm lora-italic mb-2 semi-heading">
-              {item.songTitle.englishTranslation}
-            </p>
-          )}
-          {item.poets[0]?.name && (
-            <p className="text-xs semi-heading-2 font-medium text-gray-500 uppercase tracking-wide mb-3">
-              <span className="lowercase">says</span> {item.poets[0]?.name}
-            </p>
-          )}
+          <h3 className="song-card-heading">{item.metaTitle}</h3>
+          {item.poets[0]?.name && <p className="song-semi-heading">{item.poets[0]?.name}</p>}
         </div>
 
-        <p className="card-text leading-relaxed mb-4 border-top-pink">{item.metaDescription}</p>
+        <p className="son-card-text">{item.metaDescription}</p>
 
-        <div className={`${!hasMedia ? 'justify-center' : 'justify-end'} flex`}>
+        {/* <div className={`${!hasMedia ? 'justify-center' : 'justify-end'} flex`}>
           <Link
             href={`/songs/details/${item.id}`}
             className="text-sm font-medium pink hover:text-pink-700 transition-colors z-20 uppercase"
           >
             {`EXPLORE REFLECTIONS`}
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
