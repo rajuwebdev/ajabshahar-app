@@ -15,7 +15,7 @@ const SongDetails = ({ id, title }: { id: string; title: string }) => {
       {isLoading ? (
         <Loader />
       ) : (
-        <FullBackground>
+        <FullBackground background={song?.backgroundImage || '/default-background.jpg'}>
           <div className="min-h-screen">
             <Header />
             <div
