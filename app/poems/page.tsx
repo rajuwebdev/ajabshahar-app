@@ -1,10 +1,10 @@
 'use client';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import Songs from '@/components/Songs';
+import Poems from '@/components/Poems';
 import FullBackground from '@/components/fullBackground';
 
-export default function SongsPage() {
+export default function PoemsPage() {
   return (
     <>
       <FullBackground>
@@ -13,7 +13,7 @@ export default function SongsPage() {
           <div className="news-inner-container">
             <main className="relative z-10">
               <div className="mx-auto z-11">
-                <Songs />
+                <Poems />
               </div>
             </main>
           </div>

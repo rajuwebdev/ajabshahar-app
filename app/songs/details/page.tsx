@@ -1,5 +1,5 @@
 'use client';
 
-export default function NewsPage() {
+export default function SongsDetailsPage() {
   return <></>;
 }
