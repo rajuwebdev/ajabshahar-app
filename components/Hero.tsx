@@ -10,6 +10,7 @@ import ContentSliderModal from './ContentSliderModal';
 import SongCard from './Home/SongCard/SongCard';
 import { Song } from './Home/SongCard/types';
 import Poem from './Home/Poem/Poem';
+import FilmCard from './Home/Films/FilmCard';
 
 interface IHeroProps {
   isSearchOpen: boolean;
@@ -119,6 +120,9 @@ const Hero = ({ isSearchOpen }: IHeroProps) => {
           )}
           <div className="poem-container">
             <Poem />
+          </div>
+          <div className="film-card-container">
+            <FilmCard />
           </div>
 
           {/* Ajab News Modal */}
