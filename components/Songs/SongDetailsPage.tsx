@@ -9,7 +9,7 @@ import './Songs.css';
 
 const SongDetails = ({ id, title }: { id: string; title: string }) => {
   const { song, isLoading, error } = useSongById(id, title);
-  const bgImageUrl = '/songs-bg-page.webp';
+  const bgImageUrl = '/song-bg-full.svg';
 
   return (
     <>
