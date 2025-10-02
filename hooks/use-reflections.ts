@@ -30,11 +30,10 @@ const useReflections = ({ activeFilter = REFLECTIONS_FILTER[0] }: IProps = {}) =
     activeFilter === 'ALL'
       ? uniqueReflections
       : uniqueReflections.filter((item: any) => item?.title.toLowerCase().startsWith(activeFilter));
-  console.log('filteredResults ', filteredResults);
 
   return {
     reflections: filteredResults,
-    totalResults: uniqueReflections?.length,
+    totalResults: filteredResults?.length,
     isLoading,
     error,
   };
