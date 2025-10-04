@@ -21,7 +21,7 @@ export default function SearchResults() {
           {/* Main Content */}
           <div className="max-w-6xl mx-auto px-4 pb-8">
             {/* Search Header */}
-            <div className="text-center songs-about">{SONGS_INTRO}</div>
+            <div className="text-center songs-about-intro">{SONGS_INTRO}</div>
             <div className="text-left mb-2">
               <h1 className="song-count-text">{totalSongs} songs</h1>
             </div>
@@ -52,7 +52,7 @@ export default function SearchResults() {
                     return (
                       <div
                         key={song.id}
-                        className={`bg-white break-inside-avoid mb-6 song-card py-0.5 ${
+                        className={`bg-white break-inside-avoid mb-6 song-card-landing-p  py-0.5 ${
                           !hasMedia ? 'no-media-padding' : ''
                         }`}
                       >

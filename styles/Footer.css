@@ -78,7 +78,7 @@ button.pink {
   font-size: 1.14rem;
 }
 .email-subscribe::before {
-  content: " |  ";
+  content: ' |  ';
   margin: 0 4px;
   font-size: 1.14rem;
   position: absolute;
@@ -96,14 +96,14 @@ button.pink {
   color: var(--main-pink-color);
 }
 .footer-heading-text a {
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   font-weight: 400;
   line-height: normal;
   font-size: 28px;
 }
 
 .footer-bg::before {
-  content: " ";
+  content: ' ';
   background: url(/tree.svg) no-repeat;
   background-size: cover;
   position: absolute;
@@ -140,9 +140,6 @@ button.pink {
   }
   .tree-icon {
     top: 2.85rem;
-  }
-  .product-card:nth-child(even) {
-    transform: translate(0%, 0);
   }
 }
 

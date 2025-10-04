@@ -11,6 +11,8 @@ import SongCard from './Home/SongCard/SongCard';
 import { Song } from './Home/SongCard/types';
 import Poem from './Home/Poem/Poem';
 import FilmCard from './Home/Films/FilmCard';
+import People from './Home/PeopleView/People';
+import Reflection from './Home/Reflection/Reflection';
 
 interface IHeroProps {
   isSearchOpen: boolean;
@@ -48,7 +50,7 @@ const Hero = ({ isSearchOpen }: IHeroProps) => {
           <div className="absolute inset-0 bg-gradient-to-br"></div>
         </div>
 
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-26 hero-container">
+        <div className="relative z-10 pr-0 pl-0 sm:px-6  pt-26 home-hero-container">
           {/* Floating Search (absolute, overlaps cards) */}
           {isSearchOpen && (
             <div className="absolute top-35 left-1/2 -translate-x-1/2 w-[750px] max-w-full z-50">
@@ -102,7 +104,7 @@ const Hero = ({ isSearchOpen }: IHeroProps) => {
 
           {/* Content cards (stay in place, not affected by search) */}
           {!isLoading && (
-            <div className="columns-1 md:columns-2 lg:columns-1 gap-6 pb-20 pt-8">
+            <div className="columns-1 md:columns-2 lg:columns-1 gap-6  pt-8">
               {/* ✅ Only render the first song if it exists */}
               {visibleSongs.length > 0 && (
                 <div
@@ -113,13 +115,21 @@ const Hero = ({ isSearchOpen }: IHeroProps) => {
                       : ''
                   }`}
                 >
-                  <SongCard {...visibleSongs[0]} /> {/* show only the first card */}
+                  <div className="home-song-card">
+                    <SongCard {...visibleSongs[0]} /> {/* show only the first card */}
+                  </div>
                 </div>
               )}
             </div>
           )}
-          <div className="poem-container">
+          <div className="poem-card-container">
             <Poem />
+          </div>
+          <div className="reflection-card-container">
+            <Reflection />
+          </div>
+          <div className="people-card-container">
+            <People />
           </div>
           <div className="film-card-container">
             <FilmCard />

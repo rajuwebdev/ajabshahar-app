@@ -1,70 +1,64 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Image from "next/image";
-import "./News.css";
-import NewsCard from "./NewsCard";
+import React, { useState } from 'react';
+import Image from 'next/image';
+import './News.css';
+import NewsCard from './NewsCard';
 
 // News data array matching your screenshot content
 const newsData = [
   {
     id: 1,
-    title: "Gulshan-e-Armaan by KABIR PROJECT",
+    title: 'Gulshan-e-Armaan by KABIR PROJECT',
     content: [
       {
-        type: "heading",
-        text: "Gulshan-e-Armaan",
+        type: 'heading',
+        text: 'Gulshan-e-Armaan',
       },
       {
-        type: "paragraph",
-        text: "The story highlights the gulshan-e-na-a-freeda (the Uncreated Garden) that Shah hayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egote spirit of connection and love. The story highlights the gulshan-e-na-a-freeda (the UnCreated Garden) that Shah hayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egote spirit...more.",
+        type: 'paragraph',
+        text: 'The story highlights the gulshan-e-na-a-freeda (the Uncreated Garden) that Shah hayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egote spirit of connection and love. The story highlights the gulshan-e-na-a-freeda (the UnCreated Garden) that Shah hayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egote spirit...more.',
       },
     ],
-    images: ["news-banner.webp", "Rectangle.jpg", "news-banner.webp"],
-    date: "2024-01-15",
+    images: ['news-banner.webp', 'Rectangle.jpg', 'news-banner.webp'],
+    date: '2024-01-15',
   },
   {
     id: 2,
-    title: "Haman Hai Isha",
+    title: 'Haman Hai Isha',
     content: [
       {
-        type: "heading",
-        text: "Haman Hai Isha",
+        type: 'heading',
+        text: 'Haman Hai Isha',
       },
       {
-        type: "paragraph",
-        text: "The story highlights the gulshan-e-na-a-freeda (the UnCreated Garden) that Shah hayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egote spirit of connection and love.",
+        type: 'paragraph',
+        text: 'The story highlights the gulshan-e-na-a-freeda (the UnCreated Garden) that Shah hayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egote spirit of connection and love.',
       },
     ],
-    images: ["news-banner.webp"],
-    date: "2024-01-10",
+    images: ['news-banner.webp'],
+    date: '2024-01-10',
   },
   {
     id: 3,
     title: "Had Anhad I Lost My Heart To Nizam's Glance",
     content: [
       {
-        type: "heading",
+        type: 'heading',
         text: "Had Anhad I Lost My Heart To Nizam's Glance",
       },
       {
-        type: "paragraph",
-        text: "The story highlights the gulshan-e-na-a-freeda (the UnCreated Garden) that Shah hayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egote spirit of connection and love.",
+        type: 'paragraph',
+        text: 'The story highlights the gulshan-e-na-a-freeda (the UnCreated Garden) that Shah hayat spoke of, to evoke his utopian vision of a world in which the human spirit was not driven by fear, mistrust, oppression and exploitation, but rather was guided by a non-egote spirit of connection and love.',
       },
     ],
-    images: ["Rectangle.jpg", "news-banner.webp"],
-    date: "2024-01-05",
+    images: ['Rectangle.jpg', 'news-banner.webp'],
+    date: '2024-01-05',
   },
 ];
 
 // 🔹 ToggleText Component
-function ToggleText({
-  text,
-  maxChars = 200,
-}: {
-  text: string;
-  maxChars?: number;
-}) {
+function ToggleText({ text, maxChars = 200 }: { text: string; maxChars?: number }) {
   const [expanded, setExpanded] = useState(false);
 
   if (text.length <= maxChars) {
@@ -74,11 +68,8 @@ function ToggleText({
   return (
     <p className="leading-relaxed">
       {expanded ? text : text.slice(0, maxChars)}
-      <button
-        onClick={() => setExpanded(!expanded)}
-        className="pink-text cursor-pointer"
-      >
-        {expanded ? "...less" : "...more"}
+      <button onClick={() => setExpanded(!expanded)} className="pink-text cursor-pointer">
+        {expanded ? '...less' : '...more'}
       </button>
     </p>
   );
@@ -102,7 +93,7 @@ function ImageSlider({ images }: { images: string[] }) {
     <>
       <div className="relative mb-6 rounded-lg">
         {/* Main Image */}
-        <div className="relative mb-2 rounded-lg w-full max-w-[680px] h-auto mx-auto news-banner-shadow">
+        <div className="relative mb-2 rounded-lg w-full max-w-[853px] h-auto mx-auto news-banner-shadow">
           <img
             src={images[currentImageIndex]}
             alt="News image"
@@ -157,7 +148,7 @@ function ImageSlider({ images }: { images: string[] }) {
 // 🔹 Main News Component
 export default function Ajabnews() {
   return (
-    <div className="max-w-4xl mx-auto space-y-12 py-8">
+    <div className="custom-inner-container mx-auto space-y-12 py-8">
       {newsData.map((news, index) => (
         <article key={news.id} className="bg-white">
           {/* Image Slider */}
@@ -167,7 +158,7 @@ export default function Ajabnews() {
           <div className="prose prose-lg max-w-none">
             {news.content.map((section, sectionIndex) => (
               <div key={sectionIndex}>
-                {section.type === "heading" ? (
+                {section.type === 'heading' ? (
                   <h2 className="mb-4 custom-heading-font">{section.text}</h2>
                 ) : (
                   <ToggleText text={section.text} maxChars={200} />
@@ -177,9 +168,7 @@ export default function Ajabnews() {
           </div>
 
           {/* Divider - Show only between articles */}
-          {index < newsData.length - 1 && (
-            <div className="mt-7 border-dotted-seprator"></div>
-          )}
+          {index < newsData.length - 1 && <div className="mt-7 border-dotted-seprator"></div>}
         </article>
       ))}
       <NewsCard />

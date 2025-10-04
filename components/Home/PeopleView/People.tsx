@@ -6,15 +6,15 @@ import '../../../styles/CustomStyle.css';
 
 const YOUTUBE_URL = 'https://www.youtube.com/embed';
 
-export default function FilmCard() {
+export default function People() {
   // Static data from screenshot
   const filmData = {
     id: 'had-anhad',
-    metaTitle: 'Had Anhad',
+    metaTitle: 'Maukhik Parampara',
     metaDescription:
-      "Kabir was a 15th century mystic poet of north India who defied the boundaries between Hindu and Muslim. He had a Muslim name and upbringing, but his poetry repeatedly invokes the widely revered Hindu name for God – Ram. Who is Kabir's Ram?",
-    subtitle: 'Journeys with Ram & Kabir',
-    director: 'A film by SHABNAMVIRMAN!',
+      'While there are many kinds of oral traditions – those which transmit mythology, sacred texts and folklore – our focus here are the oral traditions of Kabir or other mystic poets – the Bhaktas, Sufis and Bauls. While there are many kinds of oral traditions.',
+    subtitle: 'Oral Traditions',
+    director: 'Intro byVIPUL RIKHI',
     youtubeVideoId: 'your-video-id', // Add your video ID
     thumbnailURL: '/path-to-thumbnail.jpg', // Add your thumbnail path
   };
@@ -59,10 +59,7 @@ export default function FilmCard() {
           )}
         </div>
 
-        <p
-          className="card-text leading-relaxed mb-4 border-top-pink
-        line-clamp-4 overflow-hidden text-ellipsis"
-        >
+        <p className="card-text leading-relaxed mb-4 border-top-pink line-clamp-5 overflow-hidden text-ellipsis">
           {filmData.metaDescription}
         </p>
 
@@ -71,7 +68,7 @@ export default function FilmCard() {
             href={`/films/${filmData.id}`}
             className="text-sm font-medium pink hover:text-pink-700 transition-colors z-20 uppercase"
           >
-            {`EXPLORE FILM`}
+            {`EXPLORE PEOPLE`}
           </Link>
         </div>
       </div>

@@ -1,5 +1,5 @@
-.news-inner-container {
-  background: url(/news-white-bg.png) left top;
+.inner-container-common {
+  background: url(/song-container-bg-v2.svg) left top;
   background-size: 100% auto;
   padding: 6.5rem 0 7rem;
   max-width: 1420px;
@@ -17,8 +17,8 @@
 }
 .songs-about {
   color: #6d6e71;
-  background: white;
   font-size: 20px;
+  background: transparent;
   font-weight: 400;
   line-height: normal;
   margin: 4rem;

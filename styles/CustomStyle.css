@@ -1,20 +1,17 @@
 :root {
   --main-pink-color: #e31e79;
 }
-.hero-container {
-  max-width: 900px;
-  margin: 0 auto;
+.home-hero-container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto 0;
+  padding: 130px 0 100px;
 }
-.product-card {
+.home-song-card {
   max-width: 445px;
 }
-
-.product-card:nth-child(odd) {
-  margin-left: 0;
-}
-.product-card:nth-child(even) {
-  transform: translate(100%, 0);
-  margin: 8rem 0;
+.video-custom-width {
+  padding: 4px 4px 0 4px;
 }
 .border-top-pink {
   border-top: 1px solid var(--main-pink-color);
@@ -71,6 +68,7 @@
   color: #6d6e71;
   margin: 4px 0;
   font-family: 'Lora', serif;
+  font-style: italic;
 }
 .semi-heading-2 {
   color: #6d6e71;
@@ -83,7 +81,7 @@
   font-size: 18px;
   line-height: 25px;
   color: #6d6e71;
-  margin: 1rem 0 1.9rem;
+  margin: 15px 0 34px;
 }
 .card-rounded-4 {
   border-radius: 5px 5px 0 0;
@@ -143,14 +141,34 @@
 
 /* Apply padding only for cards with no video/image */
 
-.film-card-container {
+.home-song-card,
+.film-card-container,
+.people-card-container,
+.reflection-card-container {
   max-width: 445px;
   width: 100%;
 }
+.home-song-card {
+  transform: translate(46%);
+}
+.reflection-card-container .semi-heading-2 {
+  margin: 8px 0 0;
+}
+.poem-card-container {
+  transform: translate(49%);
+  margin: 186px 0;
+}
+.reflection-card-container {
+  transform: translate(24%);
+}
+.people-card-container {
+  transform: translate(136%);
+  margin: 186px 0;
+  width: 100%;
+}
+.film-card-container {
+  transform: translate(48%);
+}
 
 @media screen and (max-width: 768px) {
-  .product-card:nth-child(even) {
-    transform: translate(0, 0);
-    margin: 4rem 0;
-  }
 }

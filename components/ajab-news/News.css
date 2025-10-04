@@ -7,7 +7,7 @@
   background: url(/news-white-bg.png) left top;
   background-size: 100% auto;
   padding: 6.5rem 0 7rem;
-  max-width: 1440px;
+  max-width: 1420px;
   width: 100%;
   text-align: left;
   margin: -30px auto 0;
@@ -15,12 +15,16 @@
   font-weight: 300;
   z-index: 100;
 }
+.custom-inner-container {
+  max-width: 1240px;
+  width: 100%;
+}
 .news-border,
 .border-dotted-seprator {
   background: transparent url(/news-border.svg) left top;
   height: 3px;
   max-width: 380px;
-  margin: 30px auto;
+  margin: 30px auto 44px;
 }
 .border-dotted-seprator {
   max-width: 100%;
@@ -38,7 +42,7 @@
 }
 .news-banner-shadow {
   filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.1));
-  padding: 0 7px 7px;
+  padding: 0 4px 4px;
   background: #fff;
 }
 .pink-text {

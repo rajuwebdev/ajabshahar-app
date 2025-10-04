@@ -10,7 +10,7 @@ export default function SongsPage() {
       {/* <FullBackground> */}
       <div className="min-h-screen">
         <Header />
-        <div className="news-inner-container">
+        <div className="inner-container-common">
           <main className="relative z-10">
             <div className="mx-auto z-11">
               <Songs />

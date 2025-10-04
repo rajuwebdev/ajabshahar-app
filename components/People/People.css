@@ -18,12 +18,13 @@
 
 .songs-about {
   color: #6d6e71;
-  background: white;
   font-size: 20px;
   font-weight: 400;
+  background: transparent;
   line-height: normal;
   margin: 4rem;
   font-family: 'Lora', serif;
+  background: transparent;
 }
 
 .black-custom-color {

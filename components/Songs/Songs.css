@@ -1,5 +1,5 @@
-.news-inner-container {
-  background: url(/news-white-bg.png) left top;
+.inner-container-common {
+  background: url(/song-container-bg-v2.svg) left top;
   background-size: 100% auto;
   padding: 6.5rem 0 7rem;
   max-width: 1420px;
@@ -15,9 +15,10 @@
   font-size: 15px;
   font-weight: 300;
 }
-.songs-about {
+.songs-about-intro {
   color: #575756;
   font-family: 'Lora', serif;
+  background: transparent;
   font-size: 20px;
   font-style: italic;
   font-weight: 400;
@@ -67,7 +68,6 @@ button.search-btn:first-child::before {
   color: #828282;
   font-family: 'Merriweather Sans';
   font-size: 21px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.84px;
@@ -75,20 +75,23 @@ button.search-btn:first-child::before {
 .song-count-text {
   color: #3c3c3b;
   font-family: 'Lora', serif;
-  font-size: 27.04px;
-  font-style: normal;
+  font-size: 27px;
   font-weight: 400;
   line-height: normal;
 }
 
-.song-card {
+.song-card-landing-p {
   max-width: 288px;
   width: 100%;
+  box-shadow: 8px 0 12px -4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 4px 4px 0 0;
 }
 .song-card-heading {
   color: #e31e79;
   font-family: 'Lora', serif;
   font-size: 24px;
+  line-height: normal;
   font-style: normal;
   font-weight: 400;
 }
@@ -107,13 +110,16 @@ button.search-btn:first-child::before {
   line-height: normal;
   font-weight: 300;
 }
-.card-shape-top::after {
+.song-card-landing-p .card-shape-top {
+  min-height: 124px;
+}
+.song-card-landing-p .card-shape-top::after {
   content: ' ';
-  background: url(/card-shape-bottom-v2.png) no-repeat;
-  width: 101%;
+  background: url(/song-card-bottom-shadow.png) no-repeat;
+  width: 108%;
   background-size: cover;
   position: absolute;
-  bottom: -30px;
+  bottom: -32px;
   left: -5px;
   height: 36px;
   z-index: 10;
@@ -124,7 +130,7 @@ button.search-btn:first-child::before {
   gap: 80px;
   justify-content: center;
   row-gap: 52px;
-  margin: 74px 0 120px;
+  margin: 74px 0 160px;
 }
 .border-t-costom {
   border-top: 1px solid #b1b1b1;

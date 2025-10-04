@@ -16,7 +16,7 @@ export default function Poem() {
     ],
     heading: 'The potter tells the earth - Thus and thus I pound you...',
     metaDescription: `Maati kahe kumhaar se 
-tu kya roondat moye? Ik din aisa aayega, main rondungi toyev`,
+tu kya roondat moye? Ik din aisa aayega, main rondungi toyev The potter tells the earth`,
   };
 
   const hasMedia = false;
@@ -31,10 +31,12 @@ tu kya roondat moye? Ik din aisa aayega, main rondungi toyev`,
           }`}
         >
           {/* Poem text */}
-          <p className="card-text leading-relaxed mb-4 whitespace-pre-line">
+          <p className="card-text leading-relaxed mb-4 whitespace-pre-line line-clamp-4 overflow-hidden text-ellipsis">
             {poemData.metaDescription}
           </p>
-          <div className="mb-4 whitespace-pre-line peopm-heading">{poemData.heading}</div>
+          <div className="mb-4 whitespace-pre-line peopm-heading whitespace-pre-line line-clamp-2 overflow-hidden text-ellipsis">
+            {poemData.heading}
+          </div>
 
           {/* Poet name with border */}
           <div className="mb-2 border-top-pink">

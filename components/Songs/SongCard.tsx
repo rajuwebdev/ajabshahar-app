@@ -12,7 +12,7 @@ export default function SongCard(item: Song) {
 
   return (
     <div
-      className={`bg-white card-rounded-4 shadow-lg hover:shadow-xl transition-shadow duration-300 ${
+      className={`bg-white  song-card-list  shadow-lg hover:shadow-xl transition-shadow duration-300 ${
         !hasMedia ? 'no-media-card' : ''
       }`}
     >
@@ -45,11 +45,19 @@ export default function SongCard(item: Song) {
         }`}
       >
         <div className="mb-2">
-          <h3 className="song-card-heading">{item.metaTitle}</h3>
-          {item.poets[0]?.name && <p className="song-semi-heading">{item.poets[0]?.name}</p>}
+          <h3 className="song-card-heading line-clamp-2 overflow-hidden text-ellipsis">
+            {item.metaTitle}
+          </h3>
+          {item.poets[0]?.name && (
+            <p className="song-semi-heading line-clamp-1 overflow-hidden text-ellipsis">
+              {item.poets[0]?.name}
+            </p>
+          )}
         </div>
 
-        <p className="son-card-text">{item.metaDescription}</p>
+        <p className="son-card-text line-clamp-2 overflow-hidden text-ellipsis">
+          {item.metaDescription}
+        </p>
 
         {/* <div className={`${!hasMedia ? 'justify-center' : 'justify-end'} flex`}>
           <Link

@@ -58,14 +58,16 @@ export default function SongCard(item: Song) {
           )}
         </div>
 
-        <p className="card-text leading-relaxed mb-4 border-top-pink">{item.metaDescription}</p>
+        <p className="card-text leading-relaxed mb-4 border-top-pink line-clamp-5 overflow-hidden text-ellipsis">
+          {item.metaDescription}
+        </p>
 
         <div className={`${!hasMedia ? 'justify-center' : 'justify-end'} flex`}>
           <Link
             href={`/songs/details/${item.id}`}
             className="text-sm font-medium pink hover:text-pink-700 transition-colors z-20 uppercase"
           >
-            {`EXPLORE REFLECTIONS`}
+            {`EXPLORE SONG`}
           </Link>
         </div>
       </div>
