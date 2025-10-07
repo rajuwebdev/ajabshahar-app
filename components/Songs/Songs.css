@@ -135,6 +135,8 @@ button.search-btn:first-child::before {
 }
 .border-t-costom {
   border-top: 1px solid #b1b1b1;
+  display: flex;
+  justify-content: space-around;
 }
 .news-inner-container {
   background: url(/song-container-bg-v2.svg) left top;
