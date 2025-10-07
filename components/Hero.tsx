@@ -136,11 +136,11 @@ const Hero = ({ isSearchOpen }: IHeroProps) => {
           </div>
 
           {/* Ajab News Modal */}
-          {/* <ContentSliderModal
+          <ContentSliderModal
             items={contentData}
             isOpen={showAjabNews}
             onClose={() => setShowAjabNews(false)}
-          /> */}
+          />
         </div>
       </section>
     </div>

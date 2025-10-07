@@ -1,13 +1,13 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Image from "next/image";
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import Image from 'next/image';
 
-import footerLogo from "../ajab-news-logo.svg";
-import SearchResults from "@/components/searche/SearchResults";
-import FullBackground from "@/components/fullBackground";
+import footerLogo from '../ajab-news-logo.svg';
+import SearchResults from '@/components/searche/SearchResults';
+import FullBackground from '@/components/fullBackground';
 
 export default function NewsPage() {
   return (
@@ -28,3 +28,5 @@ export default function NewsPage() {
     </>
   );
 }
+
+

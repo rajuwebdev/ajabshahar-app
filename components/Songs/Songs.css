@@ -17,13 +17,13 @@
 }
 .songs-about-intro {
   color: #575756;
-  font-family: 'Lora', serif;
+  font-family: 'lora-italic';
   background: transparent;
   font-size: 20px;
   font-style: italic;
   font-weight: 400;
   line-height: normal;
-  max-width: 900px;
+  max-width: 1120px;
   margin: 0 auto 50px;
 }
 
@@ -97,7 +97,8 @@ button.search-btn:first-child::before {
 }
 .song-semi-heading {
   color: #828282;
-  font-family: 'Lora', serif;
+  font-family: 'lora-italic';
+  font-family: lo;
   font-size: 20px;
   font-style: italic;
   font-weight: 400;
@@ -128,7 +129,7 @@ button.search-btn:first-child::before {
   display: flex;
   flex-wrap: wrap;
   gap: 80px;
-  justify-content: center;
+  justify-content: space-between;
   row-gap: 52px;
   margin: 74px 0 160px;
 }
