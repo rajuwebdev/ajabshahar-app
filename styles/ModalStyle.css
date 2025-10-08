@@ -37,3 +37,14 @@
   margin: 15px 0 8px;
   box-shadow: none;
 }
+.card-shape-top {
+  margin: 20px 0 0;
+  padding: 0;
+}
+.card-heading {
+  color: #4d4d4d;
+  font-family: Lora;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+}
