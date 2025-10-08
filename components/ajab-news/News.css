@@ -22,7 +22,7 @@
 .news-border,
 .border-dotted-seprator {
   background: transparent url(/news-border.svg) left top;
-  height: 3px;
+  height: 2px;
   max-width: 380px;
   margin: 30px auto 44px;
 }

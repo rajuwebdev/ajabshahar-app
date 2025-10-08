@@ -107,18 +107,27 @@ export default function SearchResults() {
           </h1>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap  gap-4 mb-10 border-t pt-3 pb-4">
-          {searchData.filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={` border-0 button-font  cursor-pointer transition-colors ${
-                activeFilter === filter ? 'text-pink text-white' : 'bg-white  border search-btn'
-              }`}
-            >
-              {filter} ({searchData.counts[filter as keyof typeof searchData.counts]})
-            </button>
+        {/* Filter Tabs with vertical separators */}
+        <div className="flex flex-wrap items-center gap-2 mb-10 border-t pt-3 pb-4">
+          {searchData.filters.map((filter, index) => (
+            <div key={filter} className="flex items-center">
+              {/* Filter Button */}
+              <button
+                onClick={() => setActiveFilter(filter)}
+                className={`border-0 button-font cursor-pointer transition-colors ${
+                  activeFilter === filter
+                    ? 'text-pink-600 font-semibold'
+                    : 'text-gray-600 hover:text-pink-500'
+                }`}
+              >
+                {filter} ({searchData.counts[filter as keyof typeof searchData.counts]})
+              </button>
+
+              {/* Vertical Separator (except for last item) */}
+              {index < searchData.filters.length - 1 && (
+                <span className="mx-3 separator-border">|</span>
+              )}
+            </div>
           ))}
         </div>
 

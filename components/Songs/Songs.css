@@ -40,7 +40,7 @@ button.search-btn {
   font-family: 'Merriweather Sans';
   background: transparent;
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: normal;
   letter-spacing: 0.84px;
 }
@@ -58,9 +58,9 @@ button.search-btn:first-child::before {
 .filters {
   color: #e31e79;
   font-family: 'Merriweather Sans';
-  font-size: 21.723px;
+  font-size: 21px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 0.869px;
 }
@@ -68,7 +68,7 @@ button.search-btn:first-child::before {
   color: #828282;
   font-family: 'Merriweather Sans';
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 0.84px;
 }
@@ -136,7 +136,7 @@ button.search-btn:first-child::before {
 .border-t-costom {
   border-top: 1px solid #b1b1b1;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .news-inner-container {
   background: url(/song-container-bg-v2.svg) left top;
@@ -148,6 +148,9 @@ button.search-btn:first-child::before {
   margin: -30px auto 0;
   min-height: 1300px;
   font-weight: 300;
+}
+.seprator-all {
+  font-size: 20px;
 }
 
 @media screen and (max-width: 767px) {

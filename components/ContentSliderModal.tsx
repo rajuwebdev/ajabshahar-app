@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import { useState, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import Image from "next/image";
+import { useState, useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import Image from 'next/image';
 
-import ajabNewsLogo from "../public/ajab-news-fly.png";
-import ajabNewsText from "../public/ajab-news-text.png";
-import PrevIcon from "../public/left-arrow.svg";
-import NextIcon from "../public/right-arrow.svg";
-import popUpBg from "../public/pop-up-bg-v2.png";
+import ajabNewsLogo from '../public/ajab-news-fly.png';
+import ajabNewsText from '../public/ajab-news-text.png';
+import PrevIcon from '../public/left-arrow.svg';
+import NextIcon from '../public/right-arrow.svg';
+import popUpBg from '../public/pop-up-bg-v2.png';
 
-import type { ContentItem } from "@/lib/data";
-import ContentCard from "./ContentCard";
-import "../styles/ModalStyle.css";
+import type { ContentItem } from '@/lib/data';
+import ContentCard from './ContentCard';
+import '../styles/ModalStyle.css';
 
 interface ContentSliderModalProps {
   items: ContentItem[];
@@ -45,12 +45,12 @@ export default function ContentSliderModal({
         className="absolute w-full h-[96%] max-w-[820px] mx-auto"
         style={{
           backgroundImage: `url(${popUpBg.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
           zIndex: -1,
         }}
       />
@@ -123,10 +123,7 @@ export default function ContentSliderModal({
             {items.map((item) => (
               <SwiperSlide key={item.id} className="flex justify-center">
                 <div className="max-w-[420px] w-full mx-auto modal-container pt-0">
-                  <ContentCard
-                    item={item}
-                    className="rounded-none shadow-none"
-                  />
+                  <ContentCard item={item} className="rounded-none shadow-none" />
                 </div>
               </SwiperSlide>
             ))}

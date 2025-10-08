@@ -81,7 +81,6 @@ button.search-btn:first-child::before {
   line-height: normal;
 }
 .button-font {
-  color: #ed1e79;
   font-family: 'Merriweather Sans';
   font-size: 22px;
   font-weight: 300;
@@ -97,4 +96,11 @@ button.search-btn:first-child::before {
   filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.1));
   padding: 0 5px 5px;
   background: #fff;
+}
+
+.separator-border {
+  font-size: 22px;
+  font-weight: 200;
+  margin: 0 12px;
+  color: #999;
 }
